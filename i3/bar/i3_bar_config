@@ -1,0 +1,56 @@
+# i3 panel config. Powerline style.
+
+panel_fifo="/tmp/i3_bar_${USER}"
+geometry="x25"
+font1="Fira Mono:size=16:antialg=true"
+font2="Inconsolata for Powerline:size=25"
+font3="Icons:size=21"
+font4=""
+font5=""
+
+# Alarm settings
+export cpu_alert=75                        # % cpu use
+export net_alert=5                         # K net use
+
+# Colour Definitons
+export color_bg="#2D112D"
+export color_fg="#161616"
+
+export color_ws_bg_FOC="#8D6E63"
+export color_ws_fg_FOC="#FFFFFF"
+export color_ws_bg_INA="#757575"
+export color_ws_fg_INA="#FFFFFF"
+export color_ws_bg_URG="#FFB74D"
+export color_ws_fg_URG="#FFFFFF"
+export color_ws_bg_ACT="#FF8A65"
+export color_ws_fg_ACT="#FFFFFF"
+
+export color_i3_bg_mode="#FFD54F"
+export color_i3_fg_mode="#FFFFFF"
+
+export color_uptime_bg="#A1887F"
+export color_uptime_fg="#FFFFFF"
+export color_cpu_bg="#FFCC80"
+export color_cpu_fg="#FFFFFF"
+export color_memory_bg="#FF8A65"
+export color_memory_fg="#FFFFFF"
+export color_volume_bg="#E57373"
+export color_volume_fg="#FFFFFF"
+export color_clock_bg="#8D6E63"
+export color_clock_fg="#FFFFFF"
+
+#default spaaaaaace between sections
+export stab=' '
+
+# Char glyps for powerline fonts
+export sep_left=""                        # Powerline separator left
+export sep_right=""                       # Powerline separator right
+export sep_l_left=""                      # Powerline light separator left
+export sep_l_right=""                     # Powerline light sepatator right
+
+# Icon glyphs from Terminusicons2
+export icon_uptime=""
+export icon_cpu=""
+export icon_memory=""
+export icon_volume=""
+export icon_clock=""

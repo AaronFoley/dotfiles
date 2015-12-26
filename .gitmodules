@@ -1,0 +1,9 @@
+[submodule "libs/git/dotbot"]
+	path = libs/git/dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "libs/git/zsh-git-prompt"]
+	path = libs/git/zsh-git-prompt
+	url = https://github.com/olivierverdier/zsh-git-prompt.git
+[submodule "libs/git/zsh-syntax-highlighting"]
+	path = libs/git/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git

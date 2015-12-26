@@ -1,0 +1,100 @@
+! Xresources file
+
+URxvt.depth: 32
+URxvt.background: rgba:1111/1111/1111/dddd
+
+! --- ~/.Xresources ------------------------------------------------------------
+! ------------------------------------------------------------------------------
+! --- generated with 4bit Terminal Color Scheme Designer -----------------------
+! ------------------------------------------------------------------------------
+! --- http://ciembor.github.com/4bit -------------------------------------------
+! ------------------------------------------------------------------------------
+
+! --- special colors ---
+
+*background: #444444
+*foreground: #cbcbcb
+
+! --- standard colors ---
+
+! black
+*color0: #444444
+
+! bright_black
+*color8: #6c6c6c
+
+! red
+*color1: #f2ad69
+
+! bright_red
+*color9: #faddc1
+
+! green
+*color2: #69f2ad
+
+! bright_green
+*color10: #c1fadd
+
+! yellow
+*color3: #adf269
+
+! bright_yellow
+*color11: #ddfac1
+
+! blue
+*color4: #ad69f2
+
+! bright_blue
+*color12: #ddc1fa
+
+! magenta
+*color5: #f269ad
+
+! bright_magenta
+*color13: #fac1dd
+
+! cyan
+*color6: #69adf2
+
+! bright_cyan
+*color14: #c1ddfa
+
+! white
+*color7: #cccccc
+
+! bright_white
+*color15: #ffffff
+
+! ------------------------------------------------------------------------------
+! --- end of terminal colors section -------------------------------------------
+! ------------------------------------------------------------------------------
+
+
+URxvt*font: 	xft:Fira Mono:size=10:antialg=true, \
+		xft:Monospace:size=10:antialias=true:hinting=true, \
+		xft:FreeSerif:style=Regular, \
+		xft:unifont:style=Medium:antialias=false, \
+		xft:Inconsolata for Powerline
+
+URxvt*scrollBar: false
+
+URxvt*urgentOnBell: True
+
+!Font configuration
+Xft.antialias:  1
+Xft.autohint:   1
+Xft.dpi:        96
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.lcdfilter:  lcddefault
+Xft.rgba:       rgb
+
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher
+URxvt.url-select.underline: true
+URxvt.matcher.button: 1w
+URxvt.url-launcher: /usr/bin/chromium
+
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+
+URxvt.clipboard.autocopy: true

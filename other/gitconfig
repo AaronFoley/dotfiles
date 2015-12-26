@@ -1,0 +1,13 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+[core]
+	editor = subl3 --wait
+[color]
+	ui = true
+[push]
+	default = upstream
+[apply]
+    whitespace = strip
+[user]
+	email = aaron.s.foley@gmail.com
+	name = Aaron Foley

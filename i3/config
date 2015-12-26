@@ -1,0 +1,226 @@
+# Set some base keys
+set $mod Mod4
+set $alt Mod1
+
+# Font for window titles. Will also be used by the bar unless a different font
+font xft:Fira Mono 11px
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+################################################
+# Program Launchers
+################################################
+
+# Audio
+bindsym $mod+Shift+a exec pavucontrol
+
+# Terminal
+bindsym $mod+Return exec urxvt
+
+# File Explorer
+bindsym $mod+Shift+d exec nemo --no-desktop
+
+# Browser
+bindsym $mod+Shift+c exec chromium --audio-buffer-size=2048
+
+# Screenshot
+bindsym Print exec scrot '%s.png' -e 'scp -q $f files:web/ss && mv $f /media/data/pictures/shots/ && echo -n "http://files.aaronfoley.net/ss/$n" | xclip -selection clipboard && notify-send -i up "Screenshot uploaded" "$n" && xdg-open http://files.aaronfoley.net/ss/$n'
+# scrot select window or rectangle
+bindsym $alt+Print exec scrot '%s.png' -s -e 'scp -q $f files:web/ss && mv $f /media/data/pictures/shots/ && echo -n "http://files.aaronfoley.net/ss/$n" | xclip -selection clipboard && notify-send -i up "Screenshot uploaded" "$n" && xdg-open http://files.aaronfoley.net/ss/$n'
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run -fn 'xft:Fira Mono:size=11' -i -q -h 25 -nb '#E3E3E3' -nf "#161616" -w 890 -x 200 -sb '#81AFCC'
+
+# Wither
+bindsym $mod+Home exec wither
+bindsym $mod+$alt+Home exec wither hide
+
+################################################
+# Shortcuts
+################################################
+
+# kill focused window
+bindsym $mod+Shift+q kill
+bindsym $alt+F4 kill
+
+bindsym $mod+$alt+r restart
+bindsym $mod+Shift+r reload
+
+# Fix Volume
+bindsym XF86AudioRaiseVolume exec ponymix increase 10
+bindsym XF86AudioLowerVolume exec ponymix decrease 5
+bindsym XF86AudioMute exec ponymix toggle
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        bindsym Left resize grow width 10 px or 10 ppt
+        bindsym Down resize shrink height 10 px or 10 ppt
+        bindsym Up resize grow height 10 px or 10 ppt
+        bindsym Right resize shrink width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+################################################
+# General
+################################################
+
+# startup apps and window decs
+default_orientation horizontal
+new_window pixel 2
+hide_edge_borders both
+focus_follows_mouse no
+
+new_float pixel 20
+
+popup_during_fullscreen smart
+
+################################################
+# Moving Windows and Workspaces
+################################################
+
+# Moving Focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Moving Containers
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+Shift+Ctrl+Left move container to output left
+bindsym $mod+Shift+Ctrl+Right move container to output right
+
+# Moving Workspaces
+bindsym $mod+Ctrl+Left move workspace to output left
+bindsym $mod+Ctrl+Right move workspace to output right
+
+################################################
+# Layout of Windows
+################################################
+
+# Layout
+bindsym $alt+shift+1 layout toggle
+bindsym $alt+shift+2 split h
+bindsym $alt+shift+3 split v
+bindsym $alt+shift+4 layout stacking
+bindsym $alt+shift+5 layout tabbed
+
+# focus the parent container
+bindsym $alt+Shift+q focus parent
+
+# focus the child container
+#bindsym $alt+Shift+w focus child
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+################################################
+# Window Classes
+################################################
+
+for_window [class="Pavucontrol"] floating enable
+for_window [class="feh"] floating enable
+
+for_window [window_role="pop-up"] floating enable
+
+#make notifications behave
+for_window [class="Xfce4-notifyd"] floating enable
+for_window [class="Xfce4-notifyd"] border none
+for_window [class="YADWIN"] border none
+for_window [class="YADWIN"] floating enable
+for_window [class="I3BARYADWIN"] border none
+for_window [class="I3BARYADWIN"] floating enable
+for_window [instance="Download"] floating enable
+for_window [class="Pnmixer"] floating enable
+for_window [window_role="plugin_ui"] floating enable
+for_window [title="Menu Update"] floating enable
+for_window [title="___"] floating enable
+
+for_window [class="^.*"] border pixel 0
+
+################################################
+# Logout System
+################################################
+
+bindsym $mod+l exec --no-startup-id /home/kaltiz/bin/pixellock.sh
+
+################################################
+# Workspaces
+################################################
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+################################################
+# Theming
+################################################
+
+smart_borders on
+
+gaps inner 16
+gaps outer 10
+
+set $blue #005588
+set $gray1 #484848
+set $gray2 #333333
+
+client.focused            $blue   $blue   #FFFFFF   #333333
+client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
+client.unfocused          $gray2   $gray2   #FFFFFF   #000000
+
+bar {
+    i3bar_command ~/.local/etc/machines/desktop/i3/bar/i3_bar.sh
+}
+
+################################################
+# Startup Applications
+################################################
+
+exec feh --bg-center /home/kaltiz/Pictures/howlsmovingcastle.jpg
+exec --no-startup-id compton -b --config ~/.config/compton.conf
+exec /home/kaltiz/bin/pixellock.sh
+exec xset s off
+exec xset s noblank
+exec xset -dpms
