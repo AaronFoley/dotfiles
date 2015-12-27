@@ -42,10 +42,10 @@
     ~/.config/zsh/bindkeys.zsh:
       create: true
       path: zsh/bindkeys.zsh
-    ~/.config/zsh/zsh-git-prompt.zsh:
+    ~/.config/zsh/000-zsh-git-prompt.zsh:
       create: true
       path: libs/git/zsh-git-prompt/zshrc.sh
-    ~/.config/zsh/zsh-syntax-highlighting.zsh:
+    ~/.config/zsh/000-zsh-syntax-highlighting.zsh:
       create: true
       path: libs/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
