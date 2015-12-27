@@ -4,6 +4,7 @@
       create: true
       path: other/dunstrc
     ~/.config/compton.conf: other/compton.conf
+    ~/.stalonetrayrc: other/stalonetrayrc
 
 # Files to do with i3
 - link:

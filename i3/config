@@ -30,7 +30,9 @@ bindsym Print exec scrot '%s.png' -e 'scp -q $f files:web/ss && mv $f /media/dat
 bindsym $alt+Print exec scrot '%s.png' -s -e 'scp -q $f files:web/ss && mv $f /media/data/pictures/shots/ && echo -n "http://files.aaronfoley.net/ss/$n" | xclip -selection clipboard && notify-send -i up "Screenshot uploaded" "$n" && xdg-open http://files.aaronfoley.net/ss/$n'
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -fn 'xft:Fira Mono:size=11' -i -q -h 25 -nb '#E3E3E3' -nf "#161616" -w 890 -x 200 -sb '#81AFCC'
+#bindsym $mod+d exec dmenu_run -fn 'xft:Fira Mono:size=11' -i -q -h 25 -nb '#E3E3E3' -nf "#161616" -w 890 -x 200 -sb '#81AFCC'
+
+bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -opacity "85" -bw 0 -bc "#1d1f21" -bg "#1d1f21" -fg "#ffffff" -hlbg "#1d1f21" -hlfg "#8abeb7" -font "Fira Mono 18"
 
 # Wither
 bindsym $mod+Home exec wither
@@ -199,8 +201,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 smart_borders on
 
-gaps inner 16
-gaps outer 10
+gaps inner 5
+gaps outer 5
 
 set $blue #005588
 set $gray1 #484848
@@ -211,16 +213,17 @@ client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
 client.unfocused          $gray2   $gray2   #FFFFFF   #000000
 
 bar {
-    i3bar_command ~/.local/etc/machines/desktop/i3/bar/i3_bar.sh
+    i3bar_command ~/.config/i3/bar/i3_bar.sh
 }
 
 ################################################
 # Startup Applications
 ################################################
 
-exec feh --bg-center /home/kaltiz/Pictures/2560x1600.jpg
+exec feh --bg-center /home/kaltiz/Pictures/howlsmovingcastle.jpg
 exec --no-startup-id compton -b --config ~/.config/compton.conf
 exec /home/kaltiz/bin/pixellock.sh
+exec stalonetray
 exec xset s off
 exec xset s noblank
 exec xset -dpms
