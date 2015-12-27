@@ -97,7 +97,7 @@ git_super_status() {
 
 function build_prompt {
   prompt_segment black default  "$FG[068] $(ps1_hostname)"
-  prompt_segment red black ' %~ '
+  prompt_segment blue black ' %~ '
   if [ "$(git_super_status)" != "" ]; then
     prompt_segment 255 black " $(git_super_status) "
   fi
