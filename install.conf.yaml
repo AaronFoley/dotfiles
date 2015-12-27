@@ -2,21 +2,52 @@
 # run the per machine configuration as well
 
 # Scripts to be added to local ~/bin
-- link:
+#- link:
 
 # Bash Files
 - link:
-  ~/.config/bash/bashrc: bash/bashrc
+    ~/.bashrc: bash/bashrc
 
 # Files that don't fit anywhere else
 - link:
-  ~/.config/git/config: other/gitconfig
-  ~/.config/dunst/dunstrc: other/dunstrc
-  ~/.config/compton.conf: other/compton.conf
-  ~/.config/dir_colors: other/dir_colors
+    ~/.config/git/config:
+      create: true
+      path: other/gitconfig
+    ~/.config/dir_colors: other/dir_colors
 
 # Files to do with zsh
 - link:
+    ~/.zshrc: zsh/zshrc
+    ~/.config/zsh/aliases.zsh:
+      create: true
+      path: zsh/aliases.zsh
+    ~/.config/zsh/colours.zsh:
+      create: true
+      path: zsh/colours.zsh
+    ~/.config/zsh/completion.zsh:
+      create: true
+      path: zsh/completion.zsh
+    ~/.config/zsh/exports.zsh:
+      create: true
+      path: zsh/exports.zsh
+    ~/.config/zsh/functions.zsh:
+      create: true
+      path: zsh/functions.zsh
+    ~/.config/zsh/prompt.zsh:
+      create: true
+      path: zsh/prompt.zsh
+    ~/.config/zsh/setopt.zsh:
+      create: true
+      path: zsh/setopt.zsh
+    ~/.config/zsh/bindkeys.zsh:
+      create: true
+      path: zsh/bindkeys.zsh
+    ~/.config/zsh/zsh-git-prompt.zsh:
+      create: true
+      path: libs/git/zsh-git-prompt/zshrc.sh
+    ~/.config/zsh/zsh-syntax-highlighting.zsh:
+      create: true
+      path: libs/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Clean symlinks which have moved
-- clean: ['~']
+- clean: ['~', '~/.config/']

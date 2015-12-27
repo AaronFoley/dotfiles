@@ -1,58 +1,13 @@
-# Plugins
-source ~/.config/zsh/plugins/zsh-git-prompt/zshrc.sh
-source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+#!/usr/bin/env zsh
 
-. /etc/profile &>/dev/null
-for i in ~/.config/zsh/zsh-{options,exports,aliases,functions}; do
-  . $i
-done
+# Zsh Configration
 
-# Colours
-autoload -U colors && colors
-
-function build_prompt {
-  prompt_segment black default  "$FG[068] $(ps1_hostname)"
-  prompt_segment cyan black ' %~ '
-  if [ "$(git_super_status)" != "" ]; then
-    prompt_segment 150 black " $(git_super_status) "
-  fi
-  prompt_end
-}
-
-PROMPT='$(build_prompt)
- %B$FG[068]❯%f%b '
-SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
-
-# auto-completion:
-autoload -U compinit
+autoload -U compinit promptinit colors vcs_info
+colors
 compinit
-_force_rehash() { (( CURRENT == 1 )) && rehash ; return 1 }
-zstyle ':completion:::::' completer _force_rehash _expand _complete _approximate 
-zstyle ':completion:*:descriptions' format "- %d -"
-zstyle ':completion:*:default' list-prompt '%S%M matches%s'
-zstyle ':completion:*:manuals' separate-sections true
-zstyle ':completion:*:manuals.(^1*)' insert-sections true
-zstyle ':completion:*' verbose true
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ${XDG_CACHE_HOME:-${HOME}/cache}
-zstyle ':completion:*' squeeze-slashes true
-zstyle ':completion:*:functions' ignored-patterns '_*'
-zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:*:kill:*:processes' command 'ps haxopid:5,user:4,%cpu:4,ni:2,stat:3,etime:8,args'
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-zstyle ':completion:*:kill:*' force-list always
+promptinit
 
-# source custom colors:
-eval $(dircolors -b ${HOME}/.config/dir_colors)
-
-# keybindings (defined AFTER scripts):
-bindkey "^[[2~" overwrite-mode
-bindkey "^[[3~" delete-char
-bindkey "^[[5~" up-line-or-search
-bindkey "^[[6~" down-line-or-search
-bindkey "^[[1~" beginning-of-line
-bindkey "^[[7~" beginning-of-line
-bindkey "^[[4~" end-of-line
-bindkey "^[[8~" end-of-line
-bindkey "^?" backward-delete-char
-bindkey '^R' history-incremental-search-backward
+# Load zsh files
+for i in $HOME/.config/zsh/*; do;
+    test -r "$i" && source "$i"
+done

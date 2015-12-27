@@ -1,0 +1,22 @@
+# Files that don't fit anywhere else
+- link:
+    ~/.config/dunst/dunstrc:
+      create: true
+      path: other/dunstrc
+    ~/.config/compton.conf: other/compton.conf
+
+# Files to do with i3
+- link:
+    ~/.config/i3: i3
+
+# Link Subl3
+- link:
+    ~/.config/sublime-text-3/Packages/User: subl3
+
+# Link X
+- link:
+    ~/.Xresources: x/Xresources
+    ~/.xinitrc: x/xinitrc
+
+# Clean symlinks which have moved
+- clean: ['~', '~/.config/']

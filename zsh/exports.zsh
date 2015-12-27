@@ -1,8 +1,7 @@
-# Coloured Man Pages!
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
+# Add User bin to the path
+export PATH=$PATH:~/bin
+
+# Setup default programs
+export LESS='--ignore-case --raw-control-chars'
+export PAGER='less'
+export EDITOR='subl -w'

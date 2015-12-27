@@ -1,0 +1,33 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Colorcoder",
+		"ColorPicker",
+		"Dayle Rees Color Schemes",
+		"DocBlockr",
+		"Dotfiles Syntax Highlighting",
+		"Flatron",
+		"GitGutter",
+		"greybeard theme",
+		"Laravel Blade Highlighter",
+		"LaTeXTools",
+		"LiveReload",
+		"MinimalFortran",
+		"Monokai Gray",
+		"Package Control",
+		"Predawn",
+		"Prolog",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"Theme - Afterglow",
+		"Theme - amCoder",
+		"Tomorrow Color Schemes",
+		"TrailingSpaces",
+		"Wombat Theme"
+	]
+}
