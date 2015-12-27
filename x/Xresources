@@ -3,68 +3,56 @@
 URxvt.depth: 32
 URxvt.background: rgba:1111/1111/1111/dddd
 
-! --- ~/.Xresources ------------------------------------------------------------
-! ------------------------------------------------------------------------------
-! --- generated with 4bit Terminal Color Scheme Designer -----------------------
-! ------------------------------------------------------------------------------
-! --- http://ciembor.github.com/4bit -------------------------------------------
-! ------------------------------------------------------------------------------
+! Base16 Tomorrow
+! Scheme: Chris Kempson (http://chriskempson.com)
 
-! --- special colors ---
+#define base00 #1d1f21
+#define base01 #282a2e
+#define base02 #373b41
+#define base03 #969896
+#define base04 #b4b7b4
+#define base05 #c5c8c6
+#define base06 #e0e0e0
+#define base07 #ffffff
+#define base08 #cc6666
+#define base09 #de935f
+#define base0A #f0c674
+#define base0B #b5bd68
+#define base0C #8abeb7
+#define base0D #81a2be
+#define base0E #b294bb
+#define base0F #a3685a
 
-*background: #444444
-*foreground: #cbcbcb
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
 
-! --- standard colors ---
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
 
-! black
-*color0: #444444
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
 
-! bright_black
-*color8: #6c6c6c
-
-! red
-*color1: #f2ad69
-
-! bright_red
-*color9: #faddc1
-
-! green
-*color2: #69f2ad
-
-! bright_green
-*color10: #c1fadd
-
-! yellow
-*color3: #adf269
-
-! bright_yellow
-*color11: #ddfac1
-
-! blue
-*color4: #ad69f2
-
-! bright_blue
-*color12: #ddc1fa
-
-! magenta
-*color5: #f269ad
-
-! bright_magenta
-*color13: #fac1dd
-
-! cyan
-*color6: #69adf2
-
-! bright_cyan
-*color14: #c1ddfa
-
-! white
-*color7: #cccccc
-
-! bright_white
-*color15: #ffffff
-
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
 ! ------------------------------------------------------------------------------
 ! --- end of terminal colors section -------------------------------------------
 ! ------------------------------------------------------------------------------
