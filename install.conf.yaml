@@ -14,6 +14,7 @@
       create: true
       path: other/gitconfig
     ~/.config/dir_colors: other/dir_colors
+    ~/.nanorc: other/nanorc
 
 # Files to do with zsh
 - link:

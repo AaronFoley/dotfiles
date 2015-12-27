@@ -19,7 +19,7 @@ bindsym $mod+Shift+a exec pavucontrol
 bindsym $mod+Return exec urxvt
 
 # File Explorer
-bindsym $mod+Shift+d exec nemo --no-desktop
+bindsym $mod+Shift+d exec nautilus
 
 # Browser
 bindsym $mod+Shift+c exec chromium --audio-buffer-size=2048
@@ -218,7 +218,7 @@ bar {
 # Startup Applications
 ################################################
 
-exec feh --bg-center /home/kaltiz/Pictures/howlsmovingcastle.jpg
+exec feh --bg-center /home/kaltiz/Pictures/2560x1600.jpg
 exec --no-startup-id compton -b --config ~/.config/compton.conf
 exec /home/kaltiz/bin/pixellock.sh
 exec xset s off
