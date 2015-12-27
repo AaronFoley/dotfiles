@@ -39,23 +39,16 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#6092BE"
+    background = "#8abeb7"
     foreground = "#FFFFFF"
     timeout = 10
 
 [urgency_normal]
-    background = "#6092BE"
+    background = "#81a2be"
     foreground = "#FFFFFF"
     timeout = 20
 
 [urgency_critical]
-    background = "#801515"
-    foreground = "#D46A6A"
+    background = "#cc6666"
+    foreground = "#FFFFFF"
     timeout = 0
-
-[irc]
-    appname = "weechat"
-    format  = "%s: %b"
-    urgency = low
-    background = "#83c83d"
-    foreground = "#000000"

@@ -25,9 +25,10 @@ bindsym $mod+Shift+d exec nautilus
 bindsym $mod+Shift+c exec chromium --audio-buffer-size=2048
 
 # Screenshot
-bindsym Print exec scrot '%s.png' -e 'scp -q $f files:web/ss && mv $f /media/data/pictures/shots/ && echo -n "http://files.aaronfoley.net/ss/$n" | xclip -selection clipboard && notify-send -i up "Screenshot uploaded" "$n" && xdg-open http://files.aaronfoley.net/ss/$n'
+bindsym Print exec scrot '%s.png' -e 'mv $f ~/Pictures/shots/ && notify-send -i up "Screenshot Captured"
+
 # scrot select window or rectangle
-bindsym $alt+Print exec scrot '%s.png' -s -e 'scp -q $f files:web/ss && mv $f /media/data/pictures/shots/ && echo -n "http://files.aaronfoley.net/ss/$n" | xclip -selection clipboard && notify-send -i up "Screenshot uploaded" "$n" && xdg-open http://files.aaronfoley.net/ss/$n'
+bindsym $alt+Print exec scrot '%s.png' -s -e 'mv $f ~/Pictures/shots/ && notify-send -i up "Screenshot Captured"
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run -fn 'xft:Fira Mono:size=11' -i -q -h 25 -nb '#E3E3E3' -nf "#161616" -w 890 -x 200 -sb '#81AFCC'
@@ -224,6 +225,7 @@ exec feh --bg-center /home/kaltiz/Pictures/howlsmovingcastle.jpg
 exec --no-startup-id compton -b --config ~/.config/compton.conf
 exec /home/kaltiz/bin/pixellock.sh
 exec stalonetray
+exec dunst
 exec xset s off
 exec xset s noblank
 exec xset -dpms
