@@ -1,0 +1,348 @@
+/* LIST-DIRECTORY */
+
+.inner .list-directory{
+    margin-bottom: -23px;
+}
+
+.list-directory li:nth-child(1){
+    order:4;
+}
+.list-directory li:nth-child(2){
+    order:1;
+}
+.list-directory li:nth-child(3){
+    order:2;
+}
+.list-directory li:nth-child(4){
+    order:3;
+}
+.list-directory li:nth-child(5){
+    order:5;
+}
+.list-directory li:nth-child(6){
+    order:6;
+}
+.list-directory li:nth-child(7){
+    order:7;
+}
+.list-directory li:nth-child(8){
+    order:8;
+}
+.list-directory li:nth-child(9){
+    order:9;
+}
+.list-directory li:nth-child(10){
+    order:10;
+}
+.list-directory li:nth-child(11){
+    order:11;
+}
+.list-directory li:nth-child(12){
+    order:12;
+}
+.list-directory li:nth-child(13){
+    order:13;
+}
+.list-directory li:nth-child(14){
+    order:14;
+}
+.list-directory li:nth-child(15){
+    order:15;
+}
+.list-directory li:nth-child(16){
+    order:16;
+}
+
+/* ----------------------------------- MEDIA QUERIES ----------------------------------- */
+
+@media screen and (max-width: 1570px) {
+
+  #content.full{
+    padding: 0;
+  }
+
+  /* COL-4 */
+
+  .grid .col.n-3 {
+    width: 33.33%;
+  }
+  .col-4 .col:nth-of-type(4n+1) {
+    clear: none;
+  }
+  .col-4 .col:nth-of-type(3n+1) {
+    clear: both;
+  }
+
+  /* COL-5 */
+
+  .grid .col.n-2-5 {
+    width: 25%;
+  }
+  .col-5 .col:nth-of-type(5n+1) {
+    clear: none;
+  }
+  .col-5 .col:nth-of-type(4n+1) {
+    clear: both;
+  }
+
+  /* PAGE USER-DIRECTORY */
+
+  .user-directory .grid .col.n-9-5{
+    width: 75%;
+  }
+
+  /* LIST-DIRECTORY */
+
+  .list-directory li:nth-child(1){
+      order:3;
+  }
+  .list-directory li:nth-child(1) .box-default{
+    padding-bottom: 65px;
+  }
+
+}
+
+/* [1423] + 66 + 66 */
+
+@media screen and (max-width: 1558px) {
+
+}
+
+/* [1280]  */
+
+@media screen and (max-width: 1280px) {
+
+  /* COL-6 */
+
+  .grid .col.n-2 {
+    width: 19.99%;
+  }
+  .col-6 .col:nth-of-type(6n+1) {
+    clear: none;
+  }
+  .col-6 .col:nth-of-type(5n+1) {
+    clear: both;
+  }
+
+  /* COL-5 */
+
+  .grid .col.n-2-5 {
+    width: 33.33%;
+  }
+  .col-5 .col:nth-of-type(4n+1) {
+    clear: none;
+  }
+  .col-5 .col:nth-of-type(3n+1) {
+    clear: both;
+  }
+
+  /* PAGE USER-DIRECTORY */
+
+  .user-directory .grid .col.n-9-5{
+    width: 66.67%;
+  }
+
+}
+
+/* [1024] + 66 + 66 */
+
+@media screen and (max-width: 1156px) {
+
+  /* N-2 */
+
+  .grid .col.n-2 {
+    width: 24.99%;
+  }
+  .col-6 .col:nth-of-type(5n+1) {
+    clear: none;
+  }
+  .col-6 .col:nth-of-type(4n+1) {
+    clear: both;
+  }
+
+}
+
+/* GRID (2 COLS) - 459*2 + 23*2 + 66*2 */
+
+@media screen and (max-width: 1096px) {
+
+  /* COL-3 */
+
+  .grid .col.n-4 {
+    width: 50%;
+  }
+  .col-3 .col:nth-of-type(3n+1) {
+    clear: none;
+  }
+  .col-3 .col:nth-of-type(2n+1) {
+    clear: both;
+  }
+
+  /* COL-5 */
+
+  .grid .col.n-2-5 {
+    width: 50%;
+  }
+  .col-5 .col:nth-of-type(3n+1) {
+    clear: none;
+  }
+  .col-5 .col:nth-of-type(2n+1) {
+    clear: both;
+  }
+
+  /* COL-4 */
+
+  .grid .col.n-3 {
+    width: 50%;
+  }
+  .col-4 .col:nth-of-type(3n+1) {
+    clear: none;
+  }
+  .col-4 .col:nth-of-type(2n+1) {
+    clear: both;
+  }
+
+  /* PAGE USER-DIRECTORY */
+
+  .user-directory .grid .col.n-9-5{
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .list-directory li:nth-child(1){
+      order:2;
+  }
+
+}
+
+/* [768] + 44 + 66*2 */
+
+@media screen and (max-width: 954px) {
+
+  /* LIST TABLE */
+
+  .list-table > li .col.n-2 {
+    display: none;
+  }
+  .list-table > li .col.n-1,
+  .list-table > li .col.n-3 {
+    width: 50%;
+  }
+  .list-table > li .col.n-4 {
+    clear: both;
+    width: 100%;
+  }
+
+  /* LIST TABLE WINNERS */
+
+  .list-table.winners > li .col.n-1 {
+    width: 100%;
+  }
+
+  /* LIST TABLE VOTES */
+
+  .block.head-user.votes .list-table > li .col.n-4 p {
+    display: none;
+  }
+  .block.head-user.votes .list-table > li .col.n-4 .box-notesite{
+    float: none;
+    padding: 10px 0 0 0;
+    top: 0;
+  }
+
+  /* N-2 */
+
+  .grid .col.n-2 {
+    width: 33.329%;
+  }
+  .col-6 .col:nth-of-type(4n+1) {
+    clear: none;
+  }
+  .col-6 .col:nth-of-type(3n+1) {
+    clear: both;
+  }
+
+  /* LIST ITEM - Nominee */
+
+  .list-item li .countdown .hasCountdown{
+    display: none;
+  }
+
+}
+
+/* 768 */
+
+@media screen and (max-width:768px) {
+
+  /* N-2 */
+
+  .grid .col.n-2 {
+    width: 50%;
+  }
+  .col-6 .col:nth-of-type(3n+1) {
+    clear: none;
+  }
+  .col-6 .col:nth-of-type(2n+1) {
+    clear: both;
+  }
+
+}
+
+/* GRID (1 COL) - 459 + 23 + 66 + 66 */
+
+@media screen and (max-width: 614px) {
+
+  /* N-4 */
+
+  .grid .col.n-4{
+    width: 100%;
+  }
+
+  /* N-4 */
+
+  .grid .col.n-3 {
+    width: 100%;
+  }
+
+  /* LIST-DIRECTORY */
+
+  .list-directory li:nth-child(1){
+      order:1;
+  }
+
+}
+
+/* [480] */
+
+@media screen and (max-width:480px) {
+
+  /* N-6 */
+
+  .grid .col.n-6 {
+    width: 100%;
+  }
+
+  /* LIST TABLE */
+
+  .list-table > li .col.n-3 {
+    display: none;
+  }
+
+  /* PAGE USER-DIRECTORY */
+
+  .user-directory .grid .col.n-3 {
+    width: 100%;
+  }
+
+  /* COL-5 */
+
+  .grid .col.n-2-5 {
+    width: 100%;
+  }
+  .grid .col.n-2-5 .box-user .desc {
+    height: auto;
+  }
+  .col-5 .col:nth-of-type(2n+1) {
+    clear: none;
+  }
+
+}
