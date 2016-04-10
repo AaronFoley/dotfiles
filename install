@@ -19,3 +19,6 @@ git submodule update --init --recursive --remote "${BASEDIR}/libs/git/"
 if [ -f ${HOSTCONFIG} ]; then
 	"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${HOSTCONFIG}" "${@}"
 fi
+
+cd "${BASEDIR}"
+git submodule update --recursive
