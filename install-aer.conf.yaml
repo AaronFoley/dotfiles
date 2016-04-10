@@ -17,7 +17,7 @@
 # Link X
 - link:
     ~/.Xresources: x/Xresources
-    ~/.xinitrc: x/xinitrc-cresco
+    ~/.xinitrc: x/xinitrc-aer
 
 # Clean symlinks which have moved
 - clean: ['~', '~/.config/']
