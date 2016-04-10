@@ -110,11 +110,11 @@ class parser():
 
         # Figure out the RHS
         if 'uptime' in self.data:
-            rhs += left_segment(os.getenv('color_uptime_bg'),   os.getenv('color_uptime_fg'),   os.getenv('icon_uptime') + ' ' + self.data['uptime'])
+            rhs += left_segment(os.getenv('color_uptime_bg'),   os.getenv('color_uptime_fg'),   os.getenv('icon_uptime') + self.data['uptime'])
             rhs += left_segment(os.getenv('color_cpu_bg'),      os.getenv('color_cpu_fg'),      os.getenv('icon_cpu') + self.data['cpu'] )
             rhs += left_segment(os.getenv('color_memory_bg'),   os.getenv('color_memory_fg'),   os.getenv('icon_memory') + self.data['memory'])
             rhs += left_segment(os.getenv('color_volume_bg'),   os.getenv('color_volume_fg'),   os.getenv('icon_volume') + self.data['volume'])
-            rhs += left_segment(os.getenv('color_power_bg'),    os.getenv('color_power_fg'),    self.data['power_status'] == 'Discharging' ?  os.getenv('icon_power') : os.getenv('icon_power_charging') + self.data['power'])
+            rhs += left_segment(os.getenv('color_power_bg'),    os.getenv('color_power_fg'),    (self.data['power_status'] == 'Discharging' ?  os.getenv('icon_power') : os.getenv('icon_power_charging')) + self.data['power'])
             rhs += left_segment(os.getenv('color_clock_bg'),    os.getenv('color_clock_fg'),    os.getenv('icon_clock') + self.data['date'])
 
         # print the screens

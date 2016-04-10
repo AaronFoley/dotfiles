@@ -9,13 +9,11 @@
     ~/bin/pacman-explicit: bin/pacman-explicit
     ~/bin/pixellock.sh: bin/pixellock.sh
 
-# Files that don't fit anywhere else
+# GUI Files
 - link:
-    ~/.config/dunst/dunstrc:
-      create: true
-      path: other/dunstrc
-    ~/.config/compton.conf: other/compton.conf
-    ~/.stalonetrayrc: other/stalonetrayrc
+    ~/.config/Trolltech.conf: gui/qt-trolltech.conf
+    ~/.gtkrc-2.0: gui/gtkrc-2
+    ~/.config/gtk-3.0/settings.ini: gui/gtk-3.0/settings.ini
 
 # Files to do with i3
 - shell:

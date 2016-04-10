@@ -11,11 +11,16 @@
 
 # Files that don't fit anywhere else
 - link:
-    ~/.config/dunst/dunstrc:
-      create: true
-      path: other/dunstrc
+    ~/.config/dunst/dunstrc: other/dunstrc
     ~/.config/compton.conf: other/compton.conf
     ~/.stalonetrayrc: other/stalonetrayrc
+    ~/.config/Trolltech.conf: other/qt-trolltech.conf
+
+# GUI Files
+- link:
+    ~/.config/Trolltech.conf: gui/qt-trolltech.conf
+    ~/.gtkrc-2.0: gui/gtkrc-2
+    ~/.config/gtk-3.0/settings.ini: gui/gtk-3.0/settings.ini
 
 # Files to do with i3
 - shell:

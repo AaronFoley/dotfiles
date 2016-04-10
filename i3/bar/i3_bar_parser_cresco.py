@@ -108,7 +108,7 @@ class parser():
 
         # Figure out the RHS
         if 'uptime' in self.data:
-            rhs += left_segment(os.getenv('color_uptime_bg'),   os.getenv('color_uptime_fg'),   os.getenv('icon_uptime') + ' ' + self.data['uptime'])
+            rhs += left_segment(os.getenv('color_uptime_bg'),   os.getenv('color_uptime_fg'),   os.getenv('icon_uptime') + self.data['uptime'])
             rhs += left_segment(os.getenv('color_cpu_bg'),      os.getenv('color_cpu_fg'),      os.getenv('icon_cpu') + self.data['cpu'] )
             rhs += left_segment(os.getenv('color_memory_bg'),   os.getenv('color_memory_fg'),   os.getenv('icon_memory') + self.data['memory'])
             rhs += left_segment(os.getenv('color_volume_bg'),   os.getenv('color_volume_fg'),   os.getenv('icon_volume') + self.data['volume'])
