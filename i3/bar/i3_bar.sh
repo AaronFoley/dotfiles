@@ -18,13 +18,13 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 mkfifo "${panel_fifo}"
 
 # Get Information from conky
-conky -c $(dirname $0)/i3_bar_conky > "${panel_fifo}" &
+conky -c $(dirname $0)/i3_bar_conky_$(hostname) > "${panel_fifo}" &
 
 #Get Information about i3
 $(dirname $0)/i3_listener.py > "${panel_fifo}" &
 
 # Loop fifo
-$(dirname $0)/i3_bar_parser.py < "${panel_fifo}" \
+$(dirname $0)/i3_bar_parser_$(hostname).py < "${panel_fifo}" \
   | lemonbar -p -g "${geometry}" -B "${color_bg}" -F "${color_fg}" \
         -f "${font1}" \
         -f "${font2}" \

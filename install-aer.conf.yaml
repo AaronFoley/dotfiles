@@ -1,3 +1,9 @@
+# Scripts to be added to local ~/bin
+- link:
+    ~/bin/pacman-clean: bin/pacman-clean
+    ~/bin/pacman-explicit: bin/pacman-explicit
+    ~/bin/pixellock.sh: bin/pixellock.sh
+
 # Files that don't fit anywhere else
 - link:
     ~/.config/dunst/dunstrc:

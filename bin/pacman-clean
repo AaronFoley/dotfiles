@@ -1,0 +1,10 @@
+#!/bin/bash
+
+tar -cjf /nas/bak/pacman-database.tar.bz2 /var/lib/pacman/local
+pacman -Rscn $(pacman -Qtdq)
+paccache -r
+paccache -ruk0
+pacman-optimize && sync
+updatedb
+
+exit 0

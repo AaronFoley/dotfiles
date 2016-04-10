@@ -1,5 +1,5 @@
 # Add User bin to the path
-export PATH=$PATH:~/bin
+export PATH=~/bin:$PATH
 
 # Setup default programs
 export LESS='--ignore-case --raw-control-chars'

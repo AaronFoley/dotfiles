@@ -1,8 +1,16 @@
 # This file contains the base installation of my dot files
 # run the per machine configuration as well
 
+- defaults:
+    link:
+      create: true
+      relink: true
+
 # Scripts to be added to local ~/bin
-#- link:
+- link:
+    ~/bin/nano: bin/nano
+    ~/bin/woodo: bin/woodo
+    ~/bin/colours.sh: bin/colours.sh
 
 # Bash Files
 - link:
@@ -10,45 +18,23 @@
 
 # Files that don't fit anywhere else
 - link:
-    ~/.config/git/config:
-      create: true
-      path: other/gitconfig
+    ~/.config/git/config: other/gitconfig
     ~/.config/dir_colors: other/dir_colors
     ~/.nanorc: other/nanorc
 
 # Files to do with zsh
 - link:
     ~/.zshrc: zsh/zshrc
-    ~/.config/zsh/aliases.zsh:
-      create: true
-      path: zsh/aliases.zsh
-    ~/.config/zsh/colours.zsh:
-      create: true
-      path: zsh/colours.zsh
-    ~/.config/zsh/completion.zsh:
-      create: true
-      path: zsh/completion.zsh
-    ~/.config/zsh/exports.zsh:
-      create: true
-      path: zsh/exports.zsh
-    ~/.config/zsh/functions.zsh:
-      create: true
-      path: zsh/functions.zsh
-    ~/.config/zsh/prompt.zsh:
-      create: true
-      path: zsh/prompt.zsh
-    ~/.config/zsh/setopt.zsh:
-      create: true
-      path: zsh/setopt.zsh
-    ~/.config/zsh/bindkeys.zsh:
-      create: true
-      path: zsh/bindkeys.zsh
-    ~/.config/zsh/000-zsh-git-prompt.zsh:
-      create: true
-      path: libs/git/zsh-git-prompt/zshrc.sh
-    ~/.config/zsh/000-zsh-syntax-highlighting.zsh:
-      create: true
-      path: libs/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    ~/.config/zsh/aliases.zsh: zsh/aliases.zsh
+    ~/.config/zsh/colours.zsh: zsh/colours.zsh
+    ~/.config/zsh/completion.zsh: zsh/completion.zsh
+    ~/.config/zsh/exports.zsh: zsh/exports.zsh
+    ~/.config/zsh/functions.zsh: zsh/functions.zsh
+    ~/.config/zsh/prompt.zsh: zsh/prompt.zsh
+    ~/.config/zsh/setopt.zsh: zsh/setopt.zsh
+    ~/.config/zsh/bindkeys.zsh: zsh/bindkeys.zsh
+    ~/.config/zsh/000-zsh-git-prompt.zsh: libs/git/zsh-git-prompt/zshrc.sh
+    ~/.config/zsh/000-zsh-syntax-highlighting.zsh: libs/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Clean symlinks which have moved
 - clean: ['~', '~/.config/']
