@@ -2,9 +2,6 @@
 set $mod Mod4
 set $alt Mod1
 
-# Font for window titles. Will also be used by the bar unless a different font
-font xft:Fira Mono 11px
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -30,14 +27,9 @@ bindsym Print exec scrot '%s.png' -e 'mv $f ~/Pictures/shots/ && notify-send -i 
 # scrot select window or rectangle
 bindsym $alt+Print exec scrot '%s.png' -s -e 'mv $f ~/Pictures/shots/ && notify-send -i up "Screenshot Captured"'
 
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run -fn 'xft:Fira Mono:size=11' -i -q -h 25 -nb '#E3E3E3' -nf "#161616" -w 890 -x 200 -sb '#81AFCC'
-
 bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -opacity "85" -bw 0 -bc "#1d1f21" -bg "#1d1f21" -fg "#ffffff" -hlbg "#1d1f21" -hlfg "#8abeb7" -font "Fira Mono 18"
 
-# Wither
-bindsym $mod+Home exec wither
-bindsym $mod+$alt+Home exec wither hide
+bindsym $mod+l exec --no-startup-id /home/kaltiz/bin/pixellock.sh
 
 ################################################
 # Shortcuts
@@ -53,17 +45,6 @@ bindsym $alt+F4 kill
 bindsym $mod+$alt+r restart
 bindsym $mod+Shift+r reload
 
-# Fix Volume
-bindsym XF86AudioRaiseVolume exec ponymix increase 10
-bindsym XF86AudioLowerVolume exec ponymix decrease 5
-bindsym XF86AudioMute exec ponymix toggle
-
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
         bindsym Left resize grow width 10 px or 10 ppt
@@ -77,6 +58,17 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# Fix Volume
+bindsym XF86AudioRaiseVolume exec ponymix increase 10
+bindsym XF86AudioLowerVolume exec ponymix decrease 5
+bindsym XF86AudioMute exec ponymix toggle
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 ################################################
 # General
@@ -166,12 +158,6 @@ for_window [title="___"] floating enable
 for_window [class="^.*"] border pixel 0
 
 ################################################
-# Logout System
-################################################
-
-bindsym $mod+l exec --no-startup-id /home/kaltiz/bin/pixellock.sh
-
-################################################
 # Workspaces
 ################################################
 
@@ -212,10 +198,6 @@ set $blue #005588
 set $gray1 #484848
 set $gray2 #333333
 
-client.focused            $blue   $blue   #FFFFFF   #333333
-client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
-client.unfocused          $gray2   $gray2   #FFFFFF   #000000
-
 bar {
     i3bar_command ~/.config/i3/bar/i3_bar.sh
 }
@@ -224,10 +206,7 @@ bar {
 # Startup Applications
 ################################################
 
-exec feh --bg-scale /home/kaltiz/Pictures/Wallpapers/wallhaven-295606.png
 exec --no-startup-id compton -b --config ~/.config/compton.conf
-exec /home/kaltiz/bin/pixellock.sh
-exec stalonetray
 exec dunst
 exec xset s off
 exec xset s noblank

@@ -1,0 +1,11 @@
+################################################
+# Cresco
+################################################
+
+# Wither
+bindsym $mod+Home exec wither
+bindsym $mod+$alt+Home exec wither hide
+
+exec feh --bg-scale /home/kaltiz/Pictures/Wallpapers/wallhaven-295606.png
+exec /home/kaltiz/bin/pixellock.sh
+exec stalonetray
