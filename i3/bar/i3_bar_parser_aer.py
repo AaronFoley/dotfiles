@@ -114,7 +114,7 @@ class parser():
             rhs += left_segment(os.getenv('color_cpu_bg'),      os.getenv('color_cpu_fg'),      os.getenv('icon_cpu') + self.data['cpu'] )
             rhs += left_segment(os.getenv('color_memory_bg'),   os.getenv('color_memory_fg'),   os.getenv('icon_memory') + self.data['memory'])
             rhs += left_segment(os.getenv('color_volume_bg'),   os.getenv('color_volume_fg'),   os.getenv('icon_volume') + self.data['volume'])
-            rhs += left_segment(os.getenv('color_power_bg'),    os.getenv('color_power_fg'),    os.getenv('icon_power') + self.data['power'])
+            rhs += left_segment(os.getenv('color_power_bg'),    os.getenv('color_power_fg'),    (os.getenv('icon_power') if self.data['power_status'] == 'Discharging' else os.getenv('icon_power_charging')) + self.data['power '])
             rhs += left_segment(os.getenv('color_clock_bg'),    os.getenv('color_clock_fg'),    os.getenv('icon_clock') + self.data['date'])
 
         # print the screens
