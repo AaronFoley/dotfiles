@@ -13,31 +13,31 @@ export cpu_alert=75                        # % cpu use
 export net_alert=5                         # K net use
 
 # Colour Definitons
-export color_bg="#1d1f21"
+export color_bg="#F3F3F3"
 export color_fg="#ffffff"
 
-export color_ws_bg_FOC="#8abeb7"
+export color_ws_bg_FOC="#608da3"
 export color_ws_fg_FOC="#FFFFFF"
-export color_ws_bg_INA="#c5c8c6"
+export color_ws_bg_INA="#424153"
 export color_ws_fg_INA="#FFFFFF"
-export color_ws_bg_URG="#cc6666"
+export color_ws_bg_URG="#437084"
 export color_ws_fg_URG="#FFFFFF"
-export color_ws_bg_ACT="#e0e0e0"
+export color_ws_bg_ACT="#b6aa8e"
 export color_ws_fg_ACT="#FFFFFF"
 
-export color_i3_bg_mode="#f0c674"
+export color_i3_bg_mode="#3d6b80"
 export color_i3_fg_mode="#FFFFFF"
 
-export color_uptime_bg="#b294bb"
-export color_uptime_fg="#FFFFFF"
-export color_cpu_bg="#81a2be"
-export color_cpu_fg="#FFFFFF"
-export color_memory_bg="#8abeb7"
-export color_memory_fg="#FFFFFF"
-export color_volume_bg="#b5bd68"
-export color_volume_fg="#FFFFFF"
-export color_clock_bg="#f0c674"
-export color_clock_fg="#FFFFFF"
+export color_uptime_bg="#608da3"
+export color_uptime_fg="#ffffff"
+export color_cpu_bg="#437084"
+export color_cpu_fg="#ffffff"
+export color_memory_bg="#608da3"
+export color_memory_fg="#ffffff"
+export color_volume_bg="#437084"
+export color_volume_fg="#ffffff"
+export color_clock_bg="#608da3"
+export color_clock_fg="#ffffff"
 
 #default spaaaaaace between sections
 export stab=' '

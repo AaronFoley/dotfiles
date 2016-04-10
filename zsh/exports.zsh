@@ -4,4 +4,4 @@ export PATH=$PATH:~/bin
 # Setup default programs
 export LESS='--ignore-case --raw-control-chars'
 export PAGER='less'
-export EDITOR='subl -w'
+export EDITOR='subl3 -w'

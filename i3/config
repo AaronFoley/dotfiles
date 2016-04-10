@@ -43,6 +43,9 @@ bindsym $mod+$alt+Home exec wither hide
 # Shortcuts
 ################################################
 
+# Go to sleep
+bindsym $mod+Pause exec systemctl suspend
+
 # kill focused window
 bindsym $mod+Shift+q kill
 bindsym $alt+F4 kill
@@ -221,7 +224,7 @@ bar {
 # Startup Applications
 ################################################
 
-exec feh --bg-center /home/kaltiz/Pictures/howlsmovingcastle.jpg
+exec feh --bg-scale /home/kaltiz/Pictures/Wallpapers/wallhaven-295606.png
 exec --no-startup-id compton -b --config ~/.config/compton.conf
 exec /home/kaltiz/bin/pixellock.sh
 exec stalonetray
