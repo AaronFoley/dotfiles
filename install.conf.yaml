@@ -25,6 +25,7 @@
 # Files to do with zsh
 - link:
     ~/.zshrc: zsh/zshrc
+    ~/.zlogin: zsh/zlogin
     ~/.config/zsh/aliases.zsh: zsh/aliases.zsh
     ~/.config/zsh/colours.zsh: zsh/colours.zsh
     ~/.config/zsh/completion.zsh: zsh/completion.zsh
