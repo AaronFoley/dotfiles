@@ -2,3 +2,10 @@
 # Aer
 ################################################
 
+# Fix Keyboard backlight
+bindsym XF86KbdBrightnessDown exec kbdlight down
+bindsym XF86KbdBrightnessUp exec kbdlight up
+
+# Fix Backlight
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
