@@ -1,0 +1,20 @@
+background              no
+update_interval         2
+total_run_times         0
+override_utf8_locale    yes
+short_units             yes
+uppercase               no
+out_to_console          yes
+out_to_x                no
+if_up_strictness        address
+format_human_readable   true
+
+TEXT
+CONKY\
+${uptime_short}, \
+${cpu}, \
+${mem}, \
+${exec ponymix | egrep -o "([0-9]+%)" -m 1}, \
+${time %a %d %b %H:%M}, \
+${exec cat /sys/class/power_supply/BAT0/capacity}, \
+${exec cat /sys/class/power_supply/BAT0/status}

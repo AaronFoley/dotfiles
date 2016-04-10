@@ -1,7 +1,3 @@
-#
-# Kalitz's ~/.bashrc
-#
- 
 # If not Running Interactively. Don't do anything
 [ -z "$PS1" ] && return
 
@@ -195,7 +191,7 @@ __prompt_command() {
       PS1="$IWhite$Time$NC $IRed$(ps1_hostname)$NC$gitPS1$Blue$PathShort$NC\n$Red»$NC "
    else
       PS1="$IWhite$Time$NC $IGreen$(ps1_hostname)$NC$gitPS1$Blue$PathShort$NC\n$Red»$NC "
-   fi 
+   fi
 }
 
 ps1_git() {
@@ -213,7 +209,7 @@ ps1_hostname() {
    if [[ "$host" != "Lux" ]]; then
       line="$User@$host"
    fi
-   if [[ -n "$line" ]]; then 
+   if [[ -n "$line" ]]; then
       echo "$line "
    fi
 }
@@ -222,7 +218,7 @@ ps1_hostname() {
 # Useful Programs
 # -----------------------------------------------
 
-#Extract things. Thanks to urukrama, Ubuntuforums.org 
+#Extract things. Thanks to urukrama, Ubuntuforums.org
 extract () {
      if [ -f $1 ] ; then
          case $1 in
@@ -310,7 +306,7 @@ elif [[ $(hostname) == "banshee" ]]; then
       if [[ "$host" != "Lux" ]]; then
          line="$User@$host"
       fi
-      if [[ -n "$line" ]]; then 
+      if [[ -n "$line" ]]; then
          echo "$line "
       fi
    }

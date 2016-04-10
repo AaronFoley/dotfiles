@@ -36,7 +36,9 @@ export color_memory_bg="#608da3"
 export color_memory_fg="#ffffff"
 export color_volume_bg="#437084"
 export color_volume_fg="#ffffff"
-export color_clock_bg="#608da3"
+export color_power_bg="#608da3"
+export color_power_fg="#ffffff"
+export color_clock_bg="#437084"
 export color_clock_fg="#ffffff"
 
 #default spaaaaaace between sections
@@ -49,8 +51,10 @@ export sep_l_left=""                      # Powerline light separator left
 export sep_l_right=""                     # Powerline light sepatator right
 
 # Icon glyphs from Terminusicons2
-export icon_uptime=""
+export icon_uptime=""
 export icon_cpu=""
 export icon_memory=""
 export icon_volume=""
 export icon_clock=""
+export icon_power_charging=""
+export icon_power=""

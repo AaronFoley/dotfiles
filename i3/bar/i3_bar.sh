@@ -3,7 +3,7 @@
 # I3 bar with https://github.com/LemonBoy/bar
 
 # Include the configuration
-. $(dirname $0)/i3_bar_config
+. $(dirname $0)/i3_bar_config_$(hostname)
 
 # Check if the bar is already running
 if [ $(pgrep -cx $(basename $0)) -gt 1 ] ; then
