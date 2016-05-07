@@ -54,10 +54,3 @@ export icon_cpu=""
 export icon_memory=""
 export icon_volume=""
 export icon_clock=""
-
-
-
-
-rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -opacity "85" -bw 0 -color-normal "#1d1f21,#ffffff,#1d1f21,#1d1f21,#8abeb7" -color-window "#1d1f21,#ffffff" -font "Fira Mono 18"
-
--color-normal "#1d1f21,#ffffff,#1d1f21,#1d1f21,#8abeb7"
