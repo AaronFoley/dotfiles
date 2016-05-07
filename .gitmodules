@@ -1,6 +1,7 @@
 [submodule "libs/git/dotbot"]
 	path = libs/git/dotbot
 	url = https://github.com/anishathalye/dotbot
+    ignore = dirty
 [submodule "libs/git/zsh-git-prompt"]
 	path = libs/git/zsh-git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt.git

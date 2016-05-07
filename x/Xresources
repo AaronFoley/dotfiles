@@ -86,3 +86,13 @@ URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
 
 URxvt.clipboard.autocopy: true
+
+! ------------------------------------------------------------------------------
+! --- Rofi
+! ------------------------------------------------------------------------------
+
+! State:           'bg',     'fg',     'bgalt',  'hlbg',   'hlfg'
+rofi.color-normal: #1d1f21,  #ffffff,  #1d1f21,  #1d1f21,  #8abeb7
+
+!                  'background', 'border'
+rofi.color-window: #1d1f21,      #ffffff
