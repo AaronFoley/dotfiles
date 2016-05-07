@@ -23,7 +23,7 @@
 
 # Files to do with i3
 - shell:
-    - [cat i3/config.base i3/config.cresco > i3/config, Creating i3 Config]
+    - [cat i3/config.base i3/config.aer > i3/config, Creating i3 Config]
 
 # Files to do with i3
 - link:
