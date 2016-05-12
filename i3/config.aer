@@ -2,6 +2,9 @@
 # Aer
 ################################################
 
+# Background
+exec feh --bg-scale /home/aaron/Pictures/Wallpapers/wallhaven-322138.jpg
+
 # Fix Keyboard backlight
 bindsym XF86KbdBrightnessDown exec kbdlight down
 bindsym XF86KbdBrightnessUp exec kbdlight up
