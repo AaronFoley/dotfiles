@@ -3,7 +3,7 @@
 # I3 bar with https://github.com/LemonBoy/bar
 
 # Include the configuration
-. $(dirname $0)/i3_bar_config_$(hostname)
+. $(dirname $0)/i3_bar_config_$(hostname --short)
 
 # Check if the bar is already running
 if [ $(pgrep -cx $(basename $0)) -gt 1 ] ; then
@@ -18,13 +18,13 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 mkfifo "${panel_fifo}"
 
 # Get Information from conky
-conky -c $(dirname $0)/i3_bar_conky_$(hostname) > "${panel_fifo}" &
+conky -c $(dirname $0)/i3_bar_conky_$(hostname --short) > "${panel_fifo}" &
 
 #Get Information about i3
 $(dirname $0)/i3_listener.py > "${panel_fifo}" &
 
 # Loop fifo
-$(dirname $0)/i3_bar_parser_$(hostname).py < "${panel_fifo}" \
+$(dirname $0)/i3_bar_parser_$(hostname --short).py < "${panel_fifo}" \
   | lemonbar -p -g "${geometry}" -B "${color_bg}" -F "${color_fg}" \
         -f "${font1}" \
         -f "${font2}" \
