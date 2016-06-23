@@ -6,7 +6,6 @@
 bindsym $mod+Home exec wither
 bindsym $mod+$alt+Home exec wither hide
 
-exec feh --bg-scale /home/kaltiz/Pictures/Wallpapers/wallhaven-329716.jpg
-exec /home/kaltiz/bin/pixellock.sh
-exec stalonetray
+exec feh --bg-scale ~/Pictures/Wallpapers/wallhaven-295606.png
+exec ~/bin/pixellock.sh
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

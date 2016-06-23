@@ -15,7 +15,7 @@ conky.text = [[
 CONKY \
 ${uptime_short}, \
 ${cpu}, ${mem}, \
-${exec ponymix | egrep -o "([0-9]+%)" -m 1}, \
+${exec ponymix | egrep -o "([0-9]+%.*)" -m 1}, \
 ${time %a %d %b %H:%M}, \
 ${exec cat /sys/class/power_supply/BAT0/capacity}, \
 ${exec cat /sys/class/power_supply/BAT0/status}

@@ -34,7 +34,7 @@ URxvt.background: rgba:1111/1111/1111/dddd
 *.color4:       base0D
 *.color5:       base0E
 *.color6:       base0C
-*.color7:       base05
+*.color7:       #c5c8c6
 
 *.color8:       base03
 *.color9:       base08
@@ -58,11 +58,11 @@ URxvt.background: rgba:1111/1111/1111/dddd
 ! ------------------------------------------------------------------------------
 
 
-URxvt*font: 	xft:Fira Mono:size=10:antialg=true, \
-		xft:Monospace:size=10:antialias=true:hinting=true, \
-		xft:FreeSerif:style=Regular, \
-		xft:unifont:style=Medium:antialias=false, \
-		xft:Inconsolata for Powerline
+URxvt*font:     xft:Fira Mono:size=10:antialg=true, \
+        xft:Monospace:size=10:antialias=true:hinting=true, \
+        xft:FreeSerif:style=Regular, \
+        xft:unifont:style=Medium:antialias=false, \
+        xft:Inconsolata for Powerline
 
 URxvt*scrollBar: false
 
