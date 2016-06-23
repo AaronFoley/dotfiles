@@ -3,12 +3,6 @@
 ################################################
 
 # Background
-exec feh --bg-scale /home/aaron/Pictures/Wallpapers/wallhaven-322138.jpg
+exec feh --bg-scale ~/Pictures/Wallpapers/wallhaven-322138.jpg
 
-# Fix Keyboard backlight
-bindsym XF86KbdBrightnessDown exec kbdlight down
-bindsym XF86KbdBrightnessUp exec kbdlight up
-
-# Fix Backlight
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+exec --no-startup-id nm-applet

@@ -1,12 +1,21 @@
-# Set some base keys
+################################################
+# i3 Config (v4)
+################################################
+
+# Setup base settings
 set $mod Mod4
 set $alt Mod1
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+default_orientation horizontal
+hide_edge_borders both
+focus_follows_mouse no
+
+new_float pixel 20
+
+popup_during_fullscreen smart
 
 ################################################
-# Program Launchers
+# Programs and Shortcuts
 ################################################
 
 # Audio
@@ -21,22 +30,37 @@ bindsym $mod+Shift+d exec nautilus
 # Browser
 bindsym $mod+Shift+c exec chromium --audio-buffer-size=2048
 
-# Screenshot
-bindsym Print exec scrot '%s.png' -e 'mv $f ~/Pictures/shots/ && notify-send -i up "Screenshot Captured"'
-
-# scrot select window or rectangle
-bindsym $alt+Print exec scrot '%s.png' -s -e 'mv $f ~/Pictures/shots/ && notify-send -i up "Screenshot Captured"'
-
+# Rofi - Program Launcher
 bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -opacity "85" -bw 0 -font 'Fira Mono 18'
 
+# Screenlocker
 bindsym $mod+l exec --no-startup-id /home/kaltiz/bin/pixellock.sh
-
-################################################
-# Shortcuts
-################################################
 
 # Go to sleep
 bindsym $mod+Pause exec systemctl suspend
+
+# Fix Volume
+bindsym XF86AudioRaiseVolume exec ponymix increase 10
+bindsym XF86AudioLowerVolume exec ponymix decrease 5
+bindsym XF86AudioMute exec ponymix toggle
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Fix Keyboard backlight
+bindsym XF86KbdBrightnessDown exec kbdlight down
+bindsym XF86KbdBrightnessUp exec kbdlight up
+
+# Fix Backlight
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+
+################################################
+# WM Controls
+################################################
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -59,35 +83,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Fix Volume
-bindsym XF86AudioRaiseVolume exec ponymix increase 10
-bindsym XF86AudioLowerVolume exec ponymix decrease 5
-bindsym XF86AudioMute exec ponymix toggle
-
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-
-################################################
-# General
-################################################
-
-# startup apps and window decs
-default_orientation horizontal
-new_window pixel 2
-hide_edge_borders both
-focus_follows_mouse no
-
-new_float pixel 20
-
-popup_during_fullscreen smart
-
-################################################
-# Moving Windows and Workspaces
-################################################
-
 # Moving Focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -106,10 +101,6 @@ bindsym $mod+Shift+Ctrl+Right move container to output right
 # Moving Workspaces
 bindsym $mod+Ctrl+Left move workspace to output left
 bindsym $mod+Ctrl+Right move workspace to output right
-
-################################################
-# Layout of Windows
-################################################
 
 # Layout
 bindsym $alt+shift+Up split v
@@ -134,34 +125,6 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-
-################################################
-# Window Classes
-################################################
-
-for_window [class="Pavucontrol"] floating enable
-for_window [class="feh"] floating enable
-
-for_window [window_role="pop-up"] floating enable
-
-#make notifications behave
-for_window [class="Xfce4-notifyd"] floating enable
-for_window [class="Xfce4-notifyd"] border none
-for_window [class="YADWIN"] border none
-for_window [class="YADWIN"] floating enable
-for_window [class="I3BARYADWIN"] border none
-for_window [class="I3BARYADWIN"] floating enable
-for_window [instance="Download"] floating enable
-for_window [class="Pnmixer"] floating enable
-for_window [window_role="plugin_ui"] floating enable
-for_window [title="Menu Update"] floating enable
-for_window [title="___"] floating enable
-
-for_window [class="^.*"] border pixel 0
-
-################################################
-# Workspaces
-################################################
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -188,20 +151,85 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 ################################################
+# Window Classes
+################################################
+
+for_window [class="Pavucontrol"] floating enable
+for_window [class="feh"] floating enable
+
+for_window [window_role="pop-up"] floating enable
+
+#make notifications behave
+for_window [class="Xfce4-notifyd"] floating enable
+for_window [class="Xfce4-notifyd"] border none
+for_window [class="YADWIN"] border none
+for_window [class="YADWIN"] floating enable
+for_window [class="I3BARYADWIN"] border none
+for_window [class="I3BARYADWIN"] floating enable
+for_window [instance="Download"] floating enable
+for_window [class="Pnmixer"] floating enable
+for_window [window_role="plugin_ui"] floating enable
+for_window [title="Menu Update"] floating enable
+for_window [title="___"] floating enable
+
+for_window [class="^.*"] border pixel 0
+
+################################################
 # Theming
 ################################################
 
+# Setup Some Colors
+set_from_resource $darkred     color1  #000000
+set_from_resource $red         color9  #000000
+set_from_resource $darkgreen   color2  #000000
+set_from_resource $green       color10 #000000
+set_from_resource $darkyellow  color3  #000000
+set_from_resource $yellow      color11 #000000
+set_from_resource $darkblue    color4  #000000
+set_from_resource $blue        color12 #000000
+set_from_resource $darkmagenta color5  #000000
+set_from_resource $magenta     color13 #000000
+set_from_resource $darkcyan    color6  #000000
+set_from_resource $cyan        color14 #000000
+set_from_resource $darkwhite   color7  #000000
+set_from_resource $white       color15 #000000
+# Use custom colors for black
+set $black #333333
+set $transparent #00000000
+
 smart_borders on
+
+new_window pixel 2
 
 gaps inner 5
 gaps outer 5
 
-set $blue #005588
-set $gray1 #484848
-set $gray2 #333333
+font pango:Hack
 
 bar {
-    i3bar_command ~/.config/i3/bar/i3_bar.sh
+    position top
+    height 20
+    font pango:Hack, FontAwesome
+
+    i3bar_command i3bar -t
+    status_command i3blocks
+
+    tray_output eDP1
+    tray_padding 0
+
+    colors {
+
+        statusline $white
+        background $transparent
+
+#                          BORDER       BACKGROUND   TEXT
+        focused_workspace  $transparent $transparent $cyan
+        inactive_workspace $transparent $transparent $white
+        active_workspace   $transparent $transparent $white
+        urgent_workspace   $transparent $transparent $blue
+        binding_mode       $transparent $transparent $blue
+    }
+
 }
 
 ################################################
