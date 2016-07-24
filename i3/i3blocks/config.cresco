@@ -1,0 +1,25 @@
+################################################
+# i3blocks config
+################################################
+
+# Global properties
+command=/usr/libexec/i3blocks/$BLOCK_NAME
+separator_block_width=20
+markup=none
+
+# Ping
+[volume]
+label=
+command=ping -c 1 8.8.8.8 | grep -oP "[0-9\.]* ms"
+interval=1
+
+# Volume
+[volume]
+label= 
+command=ponymix | egrep -o "([0-9]+%.*)" -m 1
+interval=5
+
+[time]
+label=
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1

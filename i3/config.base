@@ -6,6 +6,8 @@
 set $mod Mod4
 set $alt Mod1
 
+floating_modifier $mod
+
 default_orientation horizontal
 hide_edge_borders both
 focus_follows_mouse no
@@ -215,6 +217,7 @@ bar {
     status_command i3blocks
 
     tray_output eDP1
+    tray_output HDMI3
     tray_padding 0
 
     colors {
@@ -241,3 +244,4 @@ exec dunst
 exec xset s off
 exec xset s noblank
 exec xset -dpms
+
