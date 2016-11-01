@@ -6,5 +6,5 @@
 bindsym $mod+Home exec wither
 bindsym $mod+$alt+Home exec wither hide
 
-exec feh --bg-scale ~/Pictures/Wallpapers/wallhaven-295606.png
+exec feh --bg-scale ~/Pictures/Wallpapers/wallhaven-110882.jpg
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
