@@ -2,7 +2,7 @@
 
 set -e
 
-HOSTNAME="$(hostname)"
+HOSTNAME="$(hostname --short)"
 CONFIG="install.conf.yaml"
 HOSTCONFIG="install-${HOSTNAME}.conf.yaml"
 DOTBOT_DIR="libs/git/dotbot"

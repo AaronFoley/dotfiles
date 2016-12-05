@@ -27,7 +27,7 @@
 
 - link:
     ~/.config/i3: i3
-    ~/.config/i3blocks/config: i3/i3blocks/config.aer
+    ~/.config/i3blocks/config: i3/i3blocks/config.cresco
 
 # Link Subl3
 - link:
