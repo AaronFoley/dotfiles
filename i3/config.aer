@@ -3,6 +3,6 @@
 ################################################
 
 # Background
-exec feh --bg-scale ~/Pictures/Wallpapers/wallhaven-322138.jpg
+exec feh --bg-scale ~/Pictures/Wallpapers/wallhaven-93962.jpg
 
 exec --no-startup-id nm-applet
