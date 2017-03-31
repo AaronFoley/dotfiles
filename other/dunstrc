@@ -5,7 +5,7 @@
     browser = /usr/bin/google-chrome-stable
     dmenu = /usr/bin/dmenu -p dunst:
     follow = mouse
-    font = Terminus (TTF) 12
+    font = Hack 10
     format = "<b>%s</b>\n%b"
     # geometry [{width}]x{height}][+/-{x}+/-{y}]
     geometry = "0-12+40"
@@ -17,20 +17,22 @@
     line_height = 0
     monitor = 2
     padding = 8
-    separator_color = frame
+    separator_color =
     separator_height = 1
     show_age_threshold = 60
     show_indicators = yes
+    icon_position = left
+    icon_folders = /usr/share/icons/Paper/32x32/status/:/usr/share/icons/Paper/32x32/devices:/usr/share/icons/Faenza/status/32/
     shrink = no
     sort = yes
-    startup_notification = true
+    startup_notification = false
     sticky_history = yes
     transparency = 0
     word_wrap = yes
 
 [frame]
-    width = 1
-    color = "6092BE"
+    width = 0
+    color = "c5c8c6"
 
 [shortcuts]
     #close = mod4+x
@@ -39,13 +41,13 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#8abeb7"
-    foreground = "#FFFFFF"
+    background = "#c5c8c6"
+    foreground = "#282a2e"
     timeout = 10
 
 [urgency_normal]
-    background = "#81a2be"
-    foreground = "#FFFFFF"
+    background = "#c5c8c6"
+    foreground = "#282a2e"
     timeout = 20
 
 [urgency_critical]
