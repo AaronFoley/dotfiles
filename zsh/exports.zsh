@@ -5,3 +5,4 @@ export PATH=~/bin:$PATH
 export LESS='--ignore-case --raw-control-chars'
 export PAGER='less'
 export EDITOR='nano'
+export BROWSER='google-chrome-stable'

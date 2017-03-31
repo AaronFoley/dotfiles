@@ -80,7 +80,7 @@ Xft.rgba:       rgb
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher
 URxvt.url-select.underline: true
 URxvt.matcher.button: 1w
-URxvt.url-launcher: /usr/bin/chromium
+URxvt.url-launcher: /usr/bin/google-chrome-stable
 
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search

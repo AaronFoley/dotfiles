@@ -2,7 +2,7 @@
     alignment = left
     allow_markup = yes
     bounce_freq = 0
-    browser = /usr/bin/chromium
+    browser = /usr/bin/google-chrome-stable
     dmenu = /usr/bin/dmenu -p dunst:
     follow = mouse
     font = Terminus (TTF) 12

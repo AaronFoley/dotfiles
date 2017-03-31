@@ -30,7 +30,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+d exec nautilus
 
 # Browser
-bindsym $mod+Shift+c exec chromium --audio-buffer-size=2048
+bindsym $mod+Shift+c exec google-chrome-stable --audio-buffer-size=2048
 
 # Rofi - Program Launcher
 bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -opacity "85" -bw 0 -font 'Fira Mono 18'
@@ -222,7 +222,7 @@ bar {
 
     colors {
 
-        statusline $white
+        statusline $black
         background $transparent
 
 #                          BORDER       BACKGROUND   TEXT

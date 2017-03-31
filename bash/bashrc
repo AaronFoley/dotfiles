@@ -148,7 +148,7 @@ User="\u"
 # -----------------------------------------------
 
 export EDITOR=subl3
-export BROWSER="chromium"
+export BROWSER="google-chrome-stable"
 
 # ----------------------------------------------
 # Variables
