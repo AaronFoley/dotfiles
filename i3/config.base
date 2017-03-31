@@ -196,9 +196,8 @@ set_from_resource $cyan        color14 #000000
 set_from_resource $darkwhite   color7  #000000
 set_from_resource $white       color15 #000000
 # Use custom colors for black
-set $black #333333
-set $transparent #00000000
-
+set $bg #263238B3
+set $fg #c5c8c6
 smart_borders on
 
 new_window pixel 2
@@ -210,30 +209,29 @@ font pango:Hack
 
 bar {
     position top
-    height 20
+    height 25
     font pango:Hack, FontAwesome
 
     i3bar_command i3bar -t
     status_command i3blocks
 
-    tray_output eDP1
-    tray_output HDMI3
-    tray_padding 0
+    tray_output none
 
     colors {
 
-        statusline $black
-        background $transparent
+        statusline $white
+        background $bg
 
 #                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $transparent $transparent $cyan
-        inactive_workspace $transparent $transparent $white
-        active_workspace   $transparent $transparent $white
-        urgent_workspace   $transparent $transparent $blue
-        binding_mode       $transparent $transparent $blue
+        focused_workspace  $bg          $bg          $cyan
+        inactive_workspace $bg          $bg          $white
+        active_workspace   $bg          $bg          $white
+        urgent_workspace   $bg          $bg          $blue
+        binding_mode       $bg          $bg          $blue
     }
 
 }
+
 
 ################################################
 # Startup Applications
