@@ -13,6 +13,7 @@
 - link:
     ~/.config/dunst/dunstrc: other/dunstrc
     ~/.config/compton.conf: other/compton.conf
+    ~/.config/screen-lock.png: libs/img/screen-lock.png
 
 # GUI Files
 - link:
@@ -36,6 +37,7 @@
 - link:
     ~/.Xresources: x/Xresources
     ~/.xinitrc: x/xinitrc-cresco
+    ~/.xsession: x/xsession
 
 # Clean symlinks which have moved
 - clean: ['~', '~/.config/']
