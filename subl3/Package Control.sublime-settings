@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"3024 Color Scheme",
 		"A File Icon",
 		"Base16 Color Schemes",
 		"Color Highlighter",
@@ -15,6 +16,7 @@
 		"HTMLBeautify",
 		"Jinja2",
 		"Material Theme",
+		"MJML-syntax",
 		"Package Control",
 		"Puppet",
 		"Sass",
