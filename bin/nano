@@ -12,5 +12,7 @@ else
     read REPLY
     if [ $REPLY ] && [ $REPLY == "y" ] ; then
         sudo /usr/bin/nano $FILE
+    else
+        /usr/bin/nano $FILE
     fi
 fi
