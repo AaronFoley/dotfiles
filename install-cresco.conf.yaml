@@ -13,7 +13,6 @@
 - link:
     ~/.config/dunst/dunstrc: other/dunstrc
     ~/.config/compton.conf: other/compton.conf
-    ~/.stalonetrayrc: other/stalonetrayrc
 
 # GUI Files
 - link:

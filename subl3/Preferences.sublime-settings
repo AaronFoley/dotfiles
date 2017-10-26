@@ -1,20 +1,105 @@
 {
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
 	"caret_extra_width": 1,
 	"caret_style": "wide",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/SublimeLinter/base16-tomorrow.dark (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/base16-materia (SL).tmTheme",
 	"copy_with_empty_selection": false,
 	"drag_text": false,
 	"draw_minimap_border": true,
 	"enable_tab_scrolling": false,
+	"extra_file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace"
+	],
+	"extra_folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS"
+	],
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace",
+		"/data/home/aaron/Documents/myairportsedan/_ss_environment.php"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"/data/home/aaron/Documents/myairportsedan/siteconfig",
+		"/data/home/aaron/Documents/myairportsedan/bootstrap-forms",
+		"/data/home/aaron/Documents/myairportsedan/reports",
+		"/data/home/aaron/Documents/myairportsedan/assets",
+		"/data/home/aaron/Documents/myairportsedan/serve",
+		"/data/home/aaron/Documents/myairportsedan/spamprotection",
+		"/data/home/aaron/Documents/myairportsedan/themes/simple",
+		"/data/home/aaron/Documents/myairportsedan/vendor",
+		"/data/home/aaron/Documents/myairportsedan/nocaptcha",
+		"/data/home/aaron/Documents/myairportsedan/framework",
+		"/data/home/aaron/Documents/myairportsedan/cms"
+	],
 	"font_face": "Hack",
-	"font_size": 13,
+	"font_options":
+	[
+		"gray_antialias",
+		"subpixel_antialias"
+	],
+	"font_size": 12,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Colorcoder",
 		"Vintage"
 	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
 	"match_brackets_content": false,
 	"match_selection": false,
 	"match_tags": false,

@@ -2,7 +2,7 @@
     alignment = left
     allow_markup = yes
     bounce_freq = 0
-    browser = /usr/bin/chromium
+    browser = /usr/bin/google-chrome-stable
     dmenu = /usr/bin/dmenu -p dunst:
     follow = mouse
     font = Hack 10
@@ -51,6 +51,6 @@
     timeout = 20
 
 [urgency_critical]
-    background = "#c5c8c6"
-    foreground = "#282a2e"
+    background = "#cc6666"
+    foreground = "#FFFFFF"
     timeout = 0

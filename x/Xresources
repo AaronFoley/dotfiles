@@ -1,30 +1,26 @@
 ! Xresources file
 
-URxvt.depth: 32
-URxvt.background: rgba:1111/1111/1111/dddd
+! Base16 Materia
+! Scheme: Defman21
 
-! Base16 Tomorrow
-! Scheme: Chris Kempson (http://chriskempson.com)
-
-#define base00 #1d1f21
-#define base01 #282a2e
-#define base02 #373b41
-#define base03 #969896
-#define base04 #b4b7b4
-#define base05 #c5c8c6
-#define base06 #e0e0e0
-#define base07 #ffffff
-#define base08 #cc6666
-#define base09 #de935f
-#define base0A #f0c674
-#define base0B #b5bd68
-#define base0C #8abeb7
-#define base0D #81a2be
-#define base0E #b294bb
-#define base0F #a3685a
+#define base00 #263238
+#define base01 #2C393F
+#define base02 #37474F
+#define base03 #707880
+#define base04 #C9CCD3
+#define base05 #CDD3DE
+#define base06 #D5DBE5
+#define base07 #FFFFFF
+#define base08 #EC5F67
+#define base09 #EA9560
+#define base0A #FFCC00
+#define base0B #8BD649
+#define base0C #80CBC4
+#define base0D #89DDFF
+#define base0E #82AAFF
+#define base0F #EC5F67
 
 *.foreground:   base05
-*.background:   base00
 *.cursorColor:  base05
 
 *.color0:       base00
@@ -34,7 +30,7 @@ URxvt.background: rgba:1111/1111/1111/dddd
 *.color4:       base0D
 *.color5:       base0E
 *.color6:       base0C
-*.color7:       #c5c8c6
+*.color7:       base05
 
 *.color8:       base03
 *.color9:       base08
@@ -53,10 +49,13 @@ URxvt.background: rgba:1111/1111/1111/dddd
 *.color19:      base02
 *.color20:      base04
 *.color21:      base06
+
 ! ------------------------------------------------------------------------------
 ! --- end of terminal colors section -------------------------------------------
 ! ------------------------------------------------------------------------------
 
+URxvt.depth: 32
+URxvt.background: [85]base00
 
 URxvt*font:     xft:Fira Mono:size=10:antialg=true, \
         xft:Monospace:size=10:antialias=true:hinting=true, \
@@ -80,7 +79,7 @@ Xft.rgba:       rgb
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher
 URxvt.url-select.underline: true
 URxvt.matcher.button: 1w
-URxvt.url-launcher: /usr/bin/chromium
+URxvt.url-launcher: /usr/bin/google-chrome-stable
 
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
