@@ -2,6 +2,14 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"3024 Color Scheme",
+		"A File Icon",
+		"Base16 Color Schemes",
+		"Gitignored File Excluder",
+		"HTMLBeautify",
+		"Jinja2",
+		"MJML-syntax",
+		"SublimeCodeIntel"
 	],
 	"installed_packages":
 	[
