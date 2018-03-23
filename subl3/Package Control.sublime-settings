@@ -5,24 +5,27 @@
 	],
 	"installed_packages":
 	[
-		"3024 Color Scheme",
 		"A File Icon",
+		"Anaconda",
 		"Base16 Color Schemes",
 		"Color Highlighter",
 		"ColorPicker",
+		"Djaneiro",
 		"Dotfiles Syntax Highlighting",
 		"GitGutter",
 		"Gitignored File Excluder",
 		"HTMLBeautify",
 		"Jinja2",
 		"Material Theme",
-		"MJML-syntax",
 		"Package Control",
-		"Puppet",
+		"Pretty JSON",
 		"Sass",
+		"SFTP",
 		"SideBarEnhancements",
-		"SublimeCodeIntel",
 		"SublimeLinter",
+		"SublimeLinter-javac",
+		"SublimeLinter-pycodestyle",
+		"SublimeLinter-pyflakes",
 		"TrailingSpaces"
 	]
 }

@@ -6,9 +6,30 @@
         "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme", 
         "gutter_theme_excludes": [], 
         "lint_mode": "background", 
-        "linters": {}, 
+        "linters": {
+            "javac": {
+                "@disable": false, 
+                "args": [], 
+                "excludes": [], 
+                "lint": ""
+            }, 
+            "pycodestyle": {
+                "@disable": false, 
+                "args": [], 
+                "excludes": [], 
+                "ignore": "E221,E501", 
+                "max-line-length": null, 
+                "select": ""
+            }, 
+            "pyflakes": {
+                "@disable": false, 
+                "args": [], 
+                "excludes": []
+            }
+        }, 
         "mark_style": "fill", 
         "no_column_highlights_line": false, 
+        "passive_warnings": false, 
         "paths": {
             "linux": [], 
             "osx": [], 
@@ -32,6 +53,7 @@
             "javascript (gruntfile)": "javascript", 
             "javascript (gulpfile)": "javascript", 
             "javascript (postcss)": "javascript", 
+            "javascript (puglint)": "javascript", 
             "javascript (stylelint)": "javascript", 
             "javascript (webpack)": "javascript", 
             "json (babel)": "json", 
@@ -40,6 +62,7 @@
             "json (eslint)": "json", 
             "json (npm)": "json", 
             "json (postcss)": "json", 
+            "json (puglint)": "json", 
             "json (settings)": "json", 
             "json (stylelint)": "json", 
             "json (sublime)": "json", 
@@ -56,6 +79,11 @@
             "yaml (stylelint)": "yaml", 
             "yaml (yarn)": "yaml"
         }, 
+        "tooltip_fontsize": "1rem", 
+        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme", 
+        "tooltip_theme_excludes": [], 
+        "tooltips": false, 
+        "use_current_shell_path": false, 
         "warning_color": "DDB700", 
         "wrap_find": true
     }
