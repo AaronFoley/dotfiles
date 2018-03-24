@@ -10,17 +10,17 @@ markup=none
 
 # Ping
 [volume]
-label= 
+label=
 command=ping -c 1 8.8.8.8 | grep -oP "[0-9\.]* ms"
 interval=1
 
 # Volume
 [volume]
-label=  
+label=
 command=ponymix | egrep -o "([0-9]+%.*)" -m 1
 interval=5
 
 [time]
-label= 
+label=
 command=date '+%a, %d %b %H:%M'
 interval=1
