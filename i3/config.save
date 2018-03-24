@@ -3,14 +3,16 @@
 ################################################
 
 # Setup base settings
-set $mod Mod4
-set $alt Mod1
+set $mod Mod1
+set $alt Ctrl
 
 floating_modifier $mod
 
 default_orientation horizontal
 hide_edge_borders both
 focus_follows_mouse no
+
+new_float pixel 20
 
 popup_during_fullscreen smart
 
@@ -34,7 +36,7 @@ bindsym $mod+Shift+c exec google-chrome-stable --audio-buffer-size=2048
 bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -opacity "85" -bw 0 -font 'Fira Mono 18'
 
 # Screenlocker
-bindsym $mod+l exec --no-startup-id ~/bin/pixellock.sh
+bindsym $mod+l exec --no-startup-id /home/kaltiz/bin/pixellock.sh
 
 # Go to sleep
 bindsym $mod+Pause exec systemctl suspend
@@ -55,8 +57,8 @@ bindsym XF86KbdBrightnessDown exec kbdlight down
 bindsym XF86KbdBrightnessUp exec kbdlight up
 
 # Fix Backlight
-bindsym XF86MonBrightnessDown exec brightnessctl set 10-
-bindsym XF86MonBrightnessUp exec brightnessctl set +10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 
 ################################################
 # WM Controls
@@ -64,7 +66,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +10
 
 # kill focused window
 bindsym $mod+Shift+q kill
-bindsym $alt+F4 kill
+bindsym $altþ+F4 kill
 
 bindsym $mod+$alt+r restart
 bindsym $mod+Shift+r reload
@@ -198,8 +200,7 @@ set $bg #263238B3
 set $fg #c5c8c6
 smart_borders on
 
-new_window none
-new_float none
+new_window pixel 2
 
 gaps inner 5
 gaps outer 5
@@ -242,3 +243,9 @@ exec xset s off
 exec xset s noblank
 exec xset -dpms
 
+################################################
+# Aer
+################################################
+
+# Background
+exec feh --bg-scale ~/Pictures/Wallpapers/wallhaven-93962.jpg

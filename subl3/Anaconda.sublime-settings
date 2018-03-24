@@ -1,0 +1,6 @@
+/*
+    Anaconda default settings
+*/
+{
+    "anaconda_linting": false
+}

@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"Todo",
 		"3024 Color Scheme",
 		"A File Icon",
 		"Base16 Color Schemes",
@@ -18,7 +19,6 @@
 		"Material Theme",
 		"MJML-syntax",
 		"Package Control",
-		"PlainTasks",
 		"Puppet",
 		"SaltStack-related syntax highlighting and snippets",
 		"Sass",
@@ -26,7 +26,12 @@
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SublimeLinter",
-		"Todo",
-		"TrailingSpaces"
+		"TrailingSpaces",
+		"Anaconda",
+		"Djaneiro",
+		"Pretty JSON",
+		"SublimeLinter-javac",
+		"SublimeLinter-pycodestyle",
+		"SublimeLinter-pyflakes"
 	]
 }

@@ -1,0 +1,13 @@
+################################################
+# i3blocks config
+################################################
+
+# Global properties
+command=/usr/libexec/i3blocks/$BLOCK_NAME
+separator_block_width=20
+markup=none
+
+[time]
+label=
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
