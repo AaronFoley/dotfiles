@@ -4,7 +4,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "wide",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/SublimeLinter/base16-materia (SL).tmTheme",
+	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-materia.tmTheme",
 	"copy_with_empty_selection": false,
 	"drag_text": false,
 	"draw_minimap_border": true,
@@ -91,6 +91,18 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"3024 Color Scheme",
+		"A File Icon",
+		"DocBlockr",
+		"Gitignored File Excluder",
+		"greybeard theme",
+		"HTMLBeautify",
+		"Jinja2",
+		"MJML-syntax",
+		"Predawn",
+		"SublimeCodeIntel",
+		"SublimeLinter-javac",
+		"SublimeLinter-pycodestyle",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -104,7 +116,7 @@
 	"match_selection": false,
 	"match_tags": false,
 	"open_files_in_new_window": false,
-	"original_color_scheme": "Packages/User/solarflare (SL).tmTheme",
+	"original_color_scheme": "Packages/User/SublimeLinter/base16-materia (SL).tmTheme",
 	"overlay_scroll_bars": "enabled",
 	"preview_on_click": false,
 	"scroll_past_end": true,

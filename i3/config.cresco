@@ -3,7 +3,7 @@
 ################################################
 
 # Wither
-bindsym $mod+Home exec wither
+bindsym $mod+Home exec sudo virsh start wither
 bindsym $mod+$alt+Home exec wither hide
 
 exec feh --bg-center ~/Pictures/Wallpapers/wallhaven-134406.jpg
