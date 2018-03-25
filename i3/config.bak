@@ -1,18 +1,16 @@
-################################################
+w################################################
 # i3 Config (v4)
 ################################################
 
 # Setup base settings
-set $mod Mod1
-set $alt Ctrl
+set $mod Mod4
+set $alt Mod1
 
 floating_modifier $mod
 
 default_orientation horizontal
 hide_edge_borders both
 focus_follows_mouse no
-
-new_float pixel 20
 
 popup_during_fullscreen smart
 
@@ -36,7 +34,7 @@ bindsym $mod+Shift+c exec google-chrome-stable --audio-buffer-size=2048
 bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -opacity "85" -bw 0 -font 'Fira Mono 18'
 
 # Screenlocker
-bindsym $mod+l exec --no-startup-id /home/kaltiz/bin/pixellock.sh
+bindsym $mod+l exec --no-startup-id light-locker-command --lock
 
 # Go to sleep
 bindsym $mod+Pause exec systemctl suspend
@@ -57,8 +55,8 @@ bindsym XF86KbdBrightnessDown exec kbdlight down
 bindsym XF86KbdBrightnessUp exec kbdlight up
 
 # Fix Backlight
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec brightnessctl set 10-
+bindsym XF86MonBrightnessUp exec brightnessctl set +10
 
 ################################################
 # WM Controls
@@ -66,7 +64,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 
 # kill focused window
 bindsym $mod+Shift+q kill
-bindsym $altþ+F4 kill
+bindsym $alt+F4 kill
 
 bindsym $mod+$alt+r restart
 bindsym $mod+Shift+r reload
@@ -140,6 +138,9 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
+bindsym $mod+F1 workspace 11
+bindsym $mod+F2 workspace 12
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
@@ -151,10 +152,15 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+F1 move container to workspace 11
+bindsym $mod+Shift+F2 move container to workspace 12
+
 
 ################################################
 # Window Classes
 ################################################
+
+for_window [class="Google-chrome"] floating disable
 
 for_window [class="Pavucontrol"] floating enable
 for_window [class="feh"] floating enable
@@ -200,7 +206,8 @@ set $bg #263238B3
 set $fg #c5c8c6
 smart_borders on
 
-new_window pixel 2
+new_window none
+new_float none
 
 gaps inner 5
 gaps outer 5
@@ -215,7 +222,7 @@ bar {
     i3bar_command i3bar -t
     status_command i3blocks
 
-    tray_output none
+    tray_output primary
 
     colors {
 
@@ -243,9 +250,16 @@ exec xset s off
 exec xset s noblank
 exec xset -dpms
 
+# Screen locking
+exec light-locker
+exec xautolock -detectsleep -time 3 -locker "light-locker-command --lock" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
 ################################################
 # Aer
 ################################################
 
+# Network Manager
+exec nm-applet
+
 # Background
-exec feh --bg-scale ~/Pictures/Wallpapers/wallhaven-93962.jpg
+exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper
+

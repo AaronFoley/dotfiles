@@ -10,12 +10,12 @@
 [apply]
     whitespace = strip
 [user]
-	email = afoley@macquariecloudservices.com
+	email = aaron.s.foley@gmail.com
 	name = Aaron Foley
 [http]
 [url "https://"]
 	insteadOf = git://
 [credential]
-	helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
+	helper = /usr/lib/git-core/git-credential-libsecret
 [pager]
 	branch = false

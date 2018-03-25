@@ -2,6 +2,9 @@
 # Aer
 ################################################
 
+# Network Manager
+exec nm-applet
+
 # Background
-exec feh --bg-scale ~/Pictures/Wallpapers/wallhaven-9372.png
+exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper
 

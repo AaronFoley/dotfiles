@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 HOSTNAME="$(hostname --short)"
 CONFIG="install.conf.yaml"
 HOSTCONFIG="install-${HOSTNAME}.conf.yaml"
@@ -17,6 +15,7 @@ git submodule update --init --recursive --remote "${BASEDIR}/libs/git/"
 
 # If there is a config file for this host
 if [ -f ${HOSTCONFIG} ]; then
+    echo "Installing Host Specific Config"
 	"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${HOSTCONFIG}" "${@}"
 fi
 

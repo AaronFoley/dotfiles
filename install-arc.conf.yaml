@@ -22,12 +22,12 @@
 
 # Files to do with i3
 - shell:
-    - [cat i3/config.base i3/config.arch > i3/config, Creating i3 Config]
+    - [cat i3/config.base i3/config.arc > i3/config, Creating i3 Config]
 
 # Files to do with i3
 - link:
     ~/.config/i3: i3
-    ~/.config/i3blocks/config: i3/i3blocks/config.arch
+    ~/.config/i3blocks/config: i3/i3blocks/config.arc
 
 # Link Subl3
 - link:
