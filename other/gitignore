@@ -1,6 +1,10 @@
 # Subl3 SFTP config file
 sftp-config.json
 
+# Subl3 Project Files
+*.sublime-project
+*.sublime-workspace
+
 # Idea
 .idea/
 *.iml

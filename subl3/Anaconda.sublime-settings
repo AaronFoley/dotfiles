@@ -2,5 +2,14 @@
     Anaconda default settings
 */
 {
-    "anaconda_linting": false
+    "anaconda_linting": true,
+
+    "pep8_ignore":
+    [
+        "E309",
+        "E266",
+        "E501",
+        "E221",
+        "E241"
+    ],
 }
