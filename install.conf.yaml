@@ -19,6 +19,7 @@
 # Files that don't fit anywhere else
 - link:
     ~/.config/git/config: other/gitconfig
+    ~/.config/git/gitignore: other/gitignore
     ~/.config/dir_colors: other/dir_colors
     ~/.nanorc: other/nanorc
 

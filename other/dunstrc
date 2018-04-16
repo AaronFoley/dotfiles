@@ -1,14 +1,14 @@
 [global]
-    alignment = left
-    allow_markup = yes
+    alignment = center
+    markup = full
     bounce_freq = 0
-    browser = /usr/bin/google-chrome-stable
+    browser = /usr/bin/google-chrome-stableshow_age_threshold
     dmenu = /usr/bin/dmenu -p dunst:
     follow = mouse
-    font = Hack 10
+    font = Fira Mono 12
     format = "<b>%s</b>\n%b"
     # geometry [{width}]x{height}][+/-{x}+/-{y}]
-    geometry = "0-12+40"
+    geometry = "400x5-30+50"
     history_length = 20
     horizontal_padding = 8
     idle_threshold = 120
@@ -17,40 +17,42 @@
     line_height = 0
     monitor = 2
     padding = 8
-    separator_color =
-    separator_height = 1
+    separator_color = auto
+    separator_height = 2
     show_age_threshold = 60
     show_indicators = yes
     icon_position = left
-    icon_folders = /usr/share/icons/Paper/32x32/status/:/usr/share/icons/Paper/32x32/devices:/usr/share/icons/Faenza/status/32/
+    icon_path = /usr/share/icons/Paper/32x32/status/:/usr/share/icons/Paper/32x32/devices:/usr/share/icons/Faenza/status/32/
     shrink = no
     sort = yes
     startup_notification = false
     sticky_history = yes
     transparency = 0
     word_wrap = yes
+    max_icon_size = 32
 
-[frame]
-    width = 0
-    color = "c5c8c6"
+    frame_width = 0
 
 [shortcuts]
-    #close = mod4+x
+    close = mod4+ctrl+grave
     #close_all = mod4+ctrl+x
     history = mod4+grave
     context = ctrl+shift+period
 
-[urgency_low]
-    background = "#c5c8c6"
-    foreground = "#282a2e"
+[base16_low]
+    msg_urgency = low
+    background = "#2C393F"
+    foreground = "#707880"
     timeout = 10
 
-[urgency_normal]
-    background = "#c5c8c6"
-    foreground = "#282a2e"
+[base16_normal]
+    msg_urgency = normal
+    background = "#37474F"
+    foreground = "#CDD3DE"
     timeout = 20
 
-[urgency_critical]
-    background = "#cc6666"
-    foreground = "#FFFFFF"
-    timeout = 0
+[base16_critical]
+    msg_urgency = critical
+    background = "#EC5F67"
+    foreground = "#D5DBE5"
+    timeout = 20

@@ -2,6 +2,7 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
 	editor = nano
+	excludesfile = /home/afoley/.config/git/gitignore
 [color]
 	ui = true
 [push]
@@ -11,3 +12,10 @@
 [user]
 	email = aaron.s.foley@gmail.com
 	name = Aaron Foley
+[http]
+[url "https://"]
+	insteadOf = git://
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+[pager]
+	branch = false
