@@ -31,7 +31,7 @@ bindsym $mod+Shift+d exec nautilus
 bindsym $mod+Shift+c exec google-chrome-stable --audio-buffer-size=2048
 
 # Rofi - Program Launcher
-bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -opacity "85" -bw 0 -font 'Fira Mono 18'
+bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -fullscreen -opacity "85" -bw 0 -font 'Fira Mono 18'
 
 # Screenlocker
 bindsym $mod+l exec --no-startup-id light-locker-command --lock
@@ -104,12 +104,9 @@ bindsym $mod+Ctrl+Right move workspace to output right
 
 # Layout
 bindsym $alt+shift+Up split v
+bindsym $alt+shift+Down split v
 bindsym $alt+shift+Right split h
-#bindsym $alt+shift+1 layout toggle
-#bindsym $alt+shift+2 split h
-#bindsym $alt+shift+3 split v
-#bindsym $alt+shift+4 layout stacking
-#bindsym $alt+shift+5 layout tabbed
+bindsym $alt+shift+Left split h
 
 # focus the parent container
 bindsym $alt+Shift+q focus parent
@@ -137,10 +134,16 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
-
-# Special Workspaces
 bindsym $mod+F1 workspace 11
 bindsym $mod+F2 workspace 12
+bindsym $mod+F3 workspace 13
+bindsym $mod+F4 workspace 14
+bindsym $mod+F5 workspace 15
+bindsym $mod+F6 workspace 16
+bindsym $mod+F7 workspace 17
+bindsym $mod+F8 workspace 18
+bindsym $mod+F9 workspace 19
+bindsym $mod+F10 workspace 20
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -155,6 +158,14 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+F1 move container to workspace 11
 bindsym $mod+Shift+F2 move container to workspace 12
+bindsym $mod+Shift+F3 move container to workspace 13
+bindsym $mod+Shift+F4 move container to workspace 14
+bindsym $mod+Shift+F5 move container to workspace 15
+bindsym $mod+Shift+F6 move container to workspace 16
+bindsym $mod+Shift+F7 move container to workspace 17
+bindsym $mod+Shift+F8 move container to workspace 18
+bindsym $mod+Shift+F9 move container to workspace 19
+bindsym $mod+Shift+F10 move container to workspace 20
 
 ################################################
 # Window Classes
@@ -242,8 +253,13 @@ bar {
 # Startup Applications
 ################################################
 
+# Compositor
 exec --no-startup-id compton -b --config ~/.config/compton.conf
+
+# Notifications
 exec dunst
+
+# Stop screen from turning off
 exec xset s off
 exec xset s noblank
 exec xset -dpms
@@ -251,3 +267,4 @@ exec xset -dpms
 # Screen locking
 exec light-locker
 #exec xautolock -detectsleep -time 3 -locker "light-locker-command --lock" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+

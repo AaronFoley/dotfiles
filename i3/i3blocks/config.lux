@@ -4,23 +4,23 @@
 
 # Global properties
 command=/usr/libexec/i3blocks/$BLOCK_NAME
-separator_block_width=15
-separator=false
+separator_block_width=20
 markup=none
 
 # Ping
-[volume]
-label=
+[ping]
+label=
 command=ping -c 1 8.8.8.8 | grep -oP "[0-9\.]* ms"
 interval=1
 
 # Volume
 [volume]
-label=
+label=
 command=ponymix | egrep -o "([0-9]+%.*)" -m 1
 interval=5
 
 [time]
-label=
-command=date '+%a, %d %b %H:%M'
+label=
+command=date '+%Y-%m-%d %H:%M:%S'
 interval=1
+
