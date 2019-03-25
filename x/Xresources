@@ -76,7 +76,7 @@ Xft.hintstyle:  hintslight
 Xft.lcdfilter:  lcddefault
 Xft.rgba:       rgb
 
-URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher,font-size
 URxvt.url-select.underline: true
 URxvt.matcher.button: 1w
 URxvt.url-launcher: /usr/bin/google-chrome-stable
@@ -85,6 +85,20 @@ URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
 
 URxvt.clipboard.autocopy: true
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+! ------------------------------------------------------------------------------
+! --- Font-Size
+! --- ctrl+= = Increase
+! --- ctrl+- = Descrese
+! --- ctrl+0 = Reset
+! ------------------------------------------------------------------------------
+
+URxvt.keysym.Control-equal: font-size:increase
+URxvt.keysym.Control-minus: font-size:decrease
+URxvt.keysym.Control-0: font-size:reset
 
 ! ------------------------------------------------------------------------------
 ! --- Rofi
