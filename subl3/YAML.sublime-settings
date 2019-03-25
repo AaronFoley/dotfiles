@@ -1,6 +1,10 @@
 {
 	"extensions":
 	[
-		"1391922975932"
+		"yml",
+		"yml.dist",
+		".gemrc",
+		"1391922975932",
+		"YAML-tmLanguage"
 	]
 }
