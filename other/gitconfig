@@ -3,6 +3,7 @@
 [core]
 	editor = nano
 	excludesfile = /home/afoley/.config/git/gitignore
+	pager = less -x1,5
 [color]
 	ui = true
 [push]
