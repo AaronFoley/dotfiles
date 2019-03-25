@@ -250,4 +250,4 @@ exec xset -dpms
 
 # Screen locking
 exec light-locker
-exec xautolock -detectsleep -time 3 -locker "light-locker-command --lock" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+#exec xautolock -detectsleep -time 3 -locker "light-locker-command --lock" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
