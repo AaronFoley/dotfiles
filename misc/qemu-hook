@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# use xrandr to switch monitor input on host during start and after stop of VM
+
+export DISPLAY=:0
+
+if [ "$1" == "wither" ]; then
+    if [ "$2" == "stopped" ]; then
+        
+        # Set screens back to normal
+        su aaron -c "/bin/xrandr --output HDMI1 --primary --auto --output HDMI2 --right-of HDMI1 --auto"
+        su aaron -c "/usr/bin/i3-msg restart"
+
+        # Turn CPU Down
+        #cpupower -c 1-7 frequency-set -g powersave
+
+        systemctl stop synergyc@aaron
+    fi
+    if [ "$2" == "start" ]; then
+
+        # Setup screens
+        su aaron -c "/usr/bin/xrandr --output HDMI1 --off --output HDMI2 --primary --auto"
+        su aaron -c "/usr/bin/i3-msg restart"
+        
+        # Turn CPU Up
+        #cpupower -c 1-7 frequency-set -g performance
+
+        systemctl start synergyc@aaron
+    fi
+fi
+
+
