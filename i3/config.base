@@ -95,10 +95,14 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+bindsym $mod+Shift+Ctrl+Up move container to output up
+bindsym $mod+Shift+Ctrl+Down move container to output down
 bindsym $mod+Shift+Ctrl+Left move container to output left
 bindsym $mod+Shift+Ctrl+Right move container to output right
 
 # Moving Workspaces
+bindsym $mod+Ctrl+Up move workspace to output up
+bindsym $mod+Ctrl+Down move workspace to output down
 bindsym $mod+Ctrl+Left move workspace to output left
 bindsym $mod+Ctrl+Right move workspace to output right
 

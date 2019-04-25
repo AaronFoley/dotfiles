@@ -1,4 +1,27 @@
 {
+	"added_words":
+	[
+		"workflows",
+		"Ansible",
+		"workflow",
+		"Openstack",
+		"Cinderlib",
+		"openstack",
+		"ansible",
+		"Powershell",
+		"Username",
+		"storops",
+		"Kubernetes",
+		"playbooks",
+		"online",
+		"pingable",
+		"zoneset",
+		"Dict",
+		"dict",
+		"Args",
+		"Avamar",
+		"Macquarie"
+	],
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
 	"caret_extra_width": 1,
@@ -88,22 +111,16 @@
 		"gray_antialias",
 		"subpixel_antialias"
 	],
-	"font_size": 14,
+	"font_size": 16,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"3024 Color Scheme",
-		"A File Icon",
 		"DocBlockr",
-		"Gitignored File Excluder",
 		"greybeard theme",
 		"HTMLBeautify",
-		"Jinja2",
-		"MJML-syntax",
+		"Markdown",
 		"Predawn",
 		"SublimeCodeIntel",
-		"SublimeLinter-javac",
-		"SublimeLinter-pycodestyle",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -125,6 +142,7 @@
 	"show_full_path": false,
 	"sidebar_default": true,
 	"sidebar_large": true,
+	"spell_check": true,
 	"tab_size": 4,
 	"tabs_large   ": true,
 	"theme": "Material-Theme.sublime-theme",
