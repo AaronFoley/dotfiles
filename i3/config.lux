@@ -5,5 +5,5 @@
 # Windows Gaming PC
 bindsym $mod+Home exec sudo virsh start wither
 
-exec feh --bg-center ~/Pictures/Wallpapers/wallpaper.jpg
+exec feh --bg-fill ~/Pictures/Wallpapers/47383448171_de9b85a69f_o.jpg
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
