@@ -1,5 +1,8 @@
 # Subl3 SFTP config file
 sftp-config.json
+sftp-config-dis.json
+sftp-config-off.json
+stfp-config*.json
 
 # Subl3 Project Files
 *.sublime-project
