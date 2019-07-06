@@ -119,11 +119,14 @@
 	"ignored_packages":
 	[
 		"DocBlockr",
+		"Gitignored File Excluder",
 		"greybeard theme",
 		"HTMLBeautify",
 		"Markdown",
 		"Predawn",
+		"SaltStack-related syntax highlighting and snippets",
 		"SublimeCodeIntel",
+		"SublimeLinter-pyflakes",
 		"Vintage"
 	],
 	"indent_guide_options":

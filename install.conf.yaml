@@ -8,7 +8,6 @@
 
 # Scripts to be added to local ~/bin
 - link:
-    ~/bin/nano: bin/nano
     ~/bin/woodo: bin/woodo
     ~/bin/colours.sh: bin/colours.sh
 

@@ -16,3 +16,5 @@ alias sudo='nocorrect sudo'
 alias fucking="sudo"
 alias please='sudo'
 alias sorry='sudo $(history -p !-1)'
+
+alias kc='kubectl'
