@@ -22,7 +22,7 @@
 		"Avamar",
 		"Macquarie",
 		"param",
-		"config"
+		"config",
 		"serializer",
 		"Django",
 		"webhook"
