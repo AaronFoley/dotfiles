@@ -20,7 +20,10 @@
 		"dict",
 		"Args",
 		"Avamar",
-		"Macquarie"
+		"Macquarie",
+		"serializer",
+		"Django",
+		"webhook"
 	],
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
@@ -111,7 +114,7 @@
 		"gray_antialias",
 		"subpixel_antialias"
 	],
-	"font_size": 16,
+	"font_size": 14,
 	"highlight_line": true,
 	"ignored_packages":
 	[
