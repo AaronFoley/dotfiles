@@ -8,6 +8,9 @@
     ~/bin/pacman-clean: bin/pacman-clean
     ~/bin/pacman-explicit: bin/pacman-explicit
     ~/bin/pixellock.sh: bin/pixellock.sh
+    ~/bin/ddspawn: bin/ddspawn
+    ~/bin/tmuxdd: bin/tmuxdd
+    ~/bin/dropdowncalc: bin/dropdowncalc
 
 # Files that don't fit anywhere else
 - link:

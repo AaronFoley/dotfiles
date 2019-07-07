@@ -59,14 +59,10 @@
 URxvt.depth: 32
 URxvt.background: [85]base00
 
-URxvt*font:     xft:Fira Mono:size=12:antialg=true, \
-        xft:Monospace:size=12:antialias=true:hinting=true, \
-        xft:FreeSerif:style=Regular, \
-        xft:unifont:style=Medium:antialias=false, \
-        xft:Inconsolata for Powerline
+URxvt*font: xft:Hack Nerd Font Mono:size=12, \
+            xft:FreeSerif:style=Regular
 
 URxvt*scrollBar: false
-
 URxvt*urgentOnBell: True
 
 !Font configuration

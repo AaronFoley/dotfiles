@@ -1,73 +1,99 @@
-################################################
-# i3 Config (v4)
-################################################
+# i3 WM configuration
 
-# Setup base settings
+######## Basic Options ########
+
 set $mod Mod4
 set $alt Mod1
 
 floating_modifier $mod
-
-default_orientation horizontal
-hide_edge_borders both
 focus_follows_mouse no
-
 popup_during_fullscreen smart
 
-################################################
-# Programs and Shortcuts
-################################################
+######## Theming ########
 
-# Audio
-bindsym $mod+Shift+a exec pavucontrol
+# Setup Some Colors
+set_from_resource $darkred     color1  #000000
+set_from_resource $red         color9  #000000
+set_from_resource $darkgreen   color2  #000000
+set_from_resource $green       color10 #000000
+set_from_resource $darkyellow  color3  #000000
+set_from_resource $yellow      color11 #000000
+set_from_resource $darkblue    color4  #000000
+set_from_resource $blue        color12 #000000
+set_from_resource $darkmagenta color5  #000000
+set_from_resource $magenta     color13 #000000
+set_from_resource $darkcyan    color6  #000000
+set_from_resource $cyan        color14 #000000
+set_from_resource $darkwhite   color7  #000000
+set_from_resource $white       color15 #000000
+# Use custom colors for black
+set $bg #263238B3
+set $fg #c5c8c6
 
-# Terminal
-bindsym $mod+Return exec urxvt
+gaps inner 10
+gaps outer 10
 
-# File Explorer
-bindsym $mod+Shift+d exec nautilus
+for_window [class="^.*"] border pixel 1
 
-# Browser
-bindsym $mod+Shift+c exec google-chrome-stable --audio-buffer-size=2048
+# class                 border      backgr. text    indicator child_border
+client.focused          $darkblue   #555555 #ffffff #2e9ef4   $darkblue
+client.unfocused        $bg         #222222 #888888 #292d2e   $bg
 
-# Rofi - Program Launcher
-bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -fullscreen -opacity "85" -bw 0 -font 'Fira Mono 18'
+font pango:Hack Nerd Font Mono
 
-# Screenlocker
-bindsym $mod+l exec --no-startup-id light-locker-command --lock
+bar {
+    position top
+    height 30
+    font pango:Hack Nerd Font Mono
+    status_command i3blocks
+    tray_output None
+    mode dock
+    colors {
+        statusline $white
+        background $bg
+        #                  BORDER       BACKGROUND   TEXT
+        focused_workspace  $bg          $bg          $cyan
+        inactive_workspace $bg          $bg          $white
+        active_workspace   $bg          $bg          $white
+        urgent_workspace   $bg          $bg          $blue
+        binding_mode       $bg          $bg          $blue
+    }
+}
 
-# Go to sleep
-bindsym $mod+Pause exec systemctl suspend
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Pavucontrol"] resize set 1000 800
+for_window [class="Pavucontrol"] move position center
+for_window [window_role="pop-up"] floating enable
 
-# Fix Volume
-bindsym XF86AudioRaiseVolume exec ponymix increase 10
-bindsym XF86AudioLowerVolume exec ponymix decrease 5
-bindsym XF86AudioMute exec ponymix toggle
+#make notifications behave
+for_window [class="Xfce4-notifyd"] floating enable
+for_window [class="Xfce4-notifyd"] border none
+for_window [class="YADWIN"] border none
+for_window [class="YADWIN"] floating enable
+for_window [class="I3BARYADWIN"] border none
+for_window [class="I3BARYADWIN"] floating enable
+for_window [instance="Download"] floating enable
+for_window [class="Pnmixer"] floating enable
+for_window [window_role="plugin_ui"] floating enable
+for_window [title="Menu Update"] floating enable
+for_window [title="___"] floating enable
 
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+# Dropdown Windows
+for_window [instance="dropdown_*"] floating enable
+for_window [instance="dropdown_*"] move scratchpad
+for_window [instance="dropdown_*"] sticky enable
+for_window [instance="dropdown_*"] scratchpad show
+for_window [instance="dropdown_tmuxdd"] resize set 1000 450
+for_window [instance="dropdown_dropdowncalc"] resize set 800 300
+for_window [instance="dropdown_tmuxdd"] border pixel 3
+for_window [instance="dropdown_dropdowncalc"] border pixel 3
+for_window [instance="dropdown_*"] move position center
 
-# Fix Keyboard backlight
-bindsym XF86KbdBrightnessDown exec kbdlight down
-bindsym XF86KbdBrightnessUp exec kbdlight up
-
-# Fix Backlight
-bindsym XF86MonBrightnessDown exec brightnessctl set 10-
-bindsym XF86MonBrightnessUp exec brightnessctl set +10
-
-# Screenshot
-bindsym Print exec flameshot gui -p ~/Pictures/ss
-
-################################################
-# WM Controls
-################################################
+######## WM Controls ########
 
 # kill focused window
-bindsym $mod+Shift+q kill
-bindsym $alt+F4 kill
+bindsym $alt+F4 [con_id="__focused__" instance="^(?!dropdown_).*$"] kill
+bindsym $alt+Shift+F4 [con_id="__focused__" instance="^(?!dropdown_).*$"] exec --no-startup-id kill -9 `xdotool getwindowfocus getwindowpid`
 
 bindsym $mod+$alt+r restart
 bindsym $mod+Shift+r reload
@@ -174,91 +200,62 @@ bindsym $mod+Shift+F8 move container to workspace 18
 bindsym $mod+Shift+F9 move container to workspace 19
 bindsym $mod+Shift+F10 move container to workspace 20
 
-################################################
-# Window Classes
-################################################
+######## Program Shortcuts ########
 
-for_window [class="Pavucontrol"] floating enable
-for_window [class="feh"] floating enable
+# Terminal
+bindsym $mod+Return exec urxvt
 
-for_window [window_role="pop-up"] floating enable
+# Audio
+bindsym $mod+a exec pavucontrol
 
-#make notifications behave
-for_window [class="Xfce4-notifyd"] floating enable
-for_window [class="Xfce4-notifyd"] border none
-for_window [class="YADWIN"] border none
-for_window [class="YADWIN"] floating enable
-for_window [class="I3BARYADWIN"] border none
-for_window [class="I3BARYADWIN"] floating enable
-for_window [instance="Download"] floating enable
-for_window [class="Pnmixer"] floating enable
-for_window [window_role="plugin_ui"] floating enable
-for_window [title="Menu Update"] floating enable
-for_window [title="___"] floating enable
+# File Explorer
+bindsym $mod+d exec nautilus
 
-for_window [class="^.*"] border pixel 0
+# Browser
+bindsym $mod+c exec google-chrome-stable --audio-buffer-size=2048
 
-################################################
-# Theming
-################################################
+# Rofi - Program Launcher
+bindsym $mod+Tab exec rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -fullscreen -opacity "85" -bw 0 -font 'Fira Mono 18'
 
-# Setup Some Colors
-set_from_resource $darkred     color1  #000000
-set_from_resource $red         color9  #000000
-set_from_resource $darkgreen   color2  #000000
-set_from_resource $green       color10 #000000
-set_from_resource $darkyellow  color3  #000000
-set_from_resource $yellow      color11 #000000
-set_from_resource $darkblue    color4  #000000
-set_from_resource $blue        color12 #000000
-set_from_resource $darkmagenta color5  #000000
-set_from_resource $magenta     color13 #000000
-set_from_resource $darkcyan    color6  #000000
-set_from_resource $cyan        color14 #000000
-set_from_resource $darkwhite   color7  #000000
-set_from_resource $white       color15 #000000
-# Use custom colors for black
-set $bg #263238B3
-set $fg #c5c8c6
-smart_borders on
+# Screenlocker
+bindsym $mod+l exec --no-startup-id light-locker-command --lock
 
-new_window none
-new_float none
+# Editor
+bindsym $mod+e exec --no-startup-id subl3
 
-gaps inner 5
-gaps outer 5
+# Scratch terminal
+bindsym $mod+s exec --no-startup-id ~/bin/ddspawn tmuxdd
 
-font pango:Hack
+# Calculator
+bindsym $mod+q exec --no-startup-id ~/bin/ddspawn dropdowncalc
 
-bar {
-    position top
-    height 25
-    font pango:Hack, FontAwesome
+# Go to sleep
+bindsym $mod+Pause exec systemctl suspend
 
-    i3bar_command i3bar -t
-    status_command i3blocks
+# Screenshot
+bindsym Print exec flameshot gui -p ~/Pictures/ss
+bindsym Shift+Print exec flameshot screen -p ~/Pictures/ss
 
-    tray_output primary
+# Fix Volume
+bindsym XF86AudioRaiseVolume exec ponymix increase 10
+bindsym XF86AudioLowerVolume exec ponymix decrease 5
+bindsym XF86AudioMute exec ponymix toggle
 
-    colors {
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
-        statusline $white
-        background $bg
+# Fix Keyboard backlight
+bindsym XF86KbdBrightnessDown exec kbdlight down
+bindsym XF86KbdBrightnessUp exec kbdlight up
 
-#                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $bg          $bg          $cyan
-        inactive_workspace $bg          $bg          $white
-        active_workspace   $bg          $bg          $white
-        urgent_workspace   $bg          $bg          $blue
-        binding_mode       $bg          $bg          $blue
-    }
+# Fix Backlight
+bindsym XF86MonBrightnessDown exec brightnessctl set 10-
+bindsym XF86MonBrightnessUp exec brightnessctl set +10
 
-}
-
-
-################################################
-# Startup Applications
-################################################
+######## Startup ########
 
 # Compositor
 exec --no-startup-id compton -b --config ~/.config/compton.conf
@@ -273,5 +270,4 @@ exec xset -dpms
 
 # Screen locking
 exec light-locker
-#exec xautolock -detectsleep -time 3 -locker "light-locker-command --lock" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
 

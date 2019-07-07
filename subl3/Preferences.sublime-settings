@@ -109,7 +109,7 @@
 		"/data/home/aaron/Documents/myairportsedan/framework",
 		"/data/home/aaron/Documents/myairportsedan/cms"
 	],
-	"font_face": "Hack",
+	"font_face": "Hack Nerd Font Mono",
 	"font_options":
 	[
 		"gid",
@@ -120,14 +120,6 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"DocBlockr",
-		"Gitignored File Excluder",
-		"greybeard theme",
-		"HTMLBeautify",
-		"Markdown",
-		"Predawn",
-		"SaltStack-related syntax highlighting and snippets",
-		"SublimeLinter-pyflakes",
 		"Vintage"
 	],
 	"indent_guide_options":

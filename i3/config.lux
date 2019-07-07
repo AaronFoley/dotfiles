@@ -1,6 +1,5 @@
-################################################
-# Cresco
-################################################
+
+######## Local (Lux) ########
 
 # Windows Gaming PC
 bindsym $mod+Home exec sudo virsh start wither
