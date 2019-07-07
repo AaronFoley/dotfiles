@@ -13,6 +13,7 @@
 - link:
     ~/.config/dunst/dunstrc: other/dunstrc
     ~/.config/compton.conf: other/compton.conf
+    ~/.config/Dharkael/flameshot.ini: other/flameshot.ini
 
 # GUI Files
 - link:

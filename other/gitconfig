@@ -2,7 +2,7 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
 	editor = nano
-	excludesfile = /home/afoley/.config/git/gitignore
+	excludesfile = ~/.config/git/gitignore
 	pager = less -x1,5
 [color]
 	ui = true

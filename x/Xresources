@@ -54,6 +54,8 @@
 ! --- end of terminal colors section -------------------------------------------
 ! ------------------------------------------------------------------------------
 
+*.internalBorder: 0
+
 URxvt.depth: 32
 URxvt.background: [85]base00
 
@@ -78,7 +80,7 @@ Xft.rgba:       rgb
 
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher,font-size
 URxvt.url-select.underline: true
-URxvt.matcher.button: 1w
+URxvt.matcher.button: 3
 URxvt.url-launcher: /usr/bin/google-chrome-stable
 
 URxvt.keysym.M-Escape: perl:keyboard-select:activate

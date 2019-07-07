@@ -58,6 +58,9 @@ bindsym XF86KbdBrightnessUp exec kbdlight up
 bindsym XF86MonBrightnessDown exec brightnessctl set 10-
 bindsym XF86MonBrightnessUp exec brightnessctl set +10
 
+# Screenshot
+bindsym Print exec flameshot gui -p ~/Pictures/ss
+
 ################################################
 # WM Controls
 ################################################

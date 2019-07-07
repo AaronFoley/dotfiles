@@ -14,6 +14,7 @@
     ~/.config/dunst/dunstrc: other/dunstrc
     ~/.config/compton.conf: other/compton.conf
     ~/.config/screen-lock.png: libs/img/screen-lock.png
+    ~/.config/Dharkael/flameshot.ini: other/flameshot.ini
 
 # GUI Files
 - link:
