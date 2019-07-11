@@ -217,9 +217,6 @@ bindsym $mod+c exec google-chrome-stable --audio-buffer-size=2048
 # Rofi - Program Launcher
 bindsym $mod+Tab exec rofi -show run -lines 5 -eh 2 -width 100 -padding 400 -fullscreen -opacity "85" -bw 0 -font 'Fira Mono 18'
 
-# Screenlocker
-bindsym $mod+l exec --no-startup-id light-locker-command --lock
-
 # Editor
 bindsym $mod+e exec --no-startup-id subl3
 
@@ -267,7 +264,3 @@ exec dunst
 exec xset s off
 exec xset s noblank
 exec xset -dpms
-
-# Screen locking
-exec light-locker
-
