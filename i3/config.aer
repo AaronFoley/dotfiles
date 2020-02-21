@@ -2,6 +2,12 @@
 # Aer
 ################################################
 
+# Screenlocker
+bindsym $mod+l exec --no-startup-id light-locker-command --lock
+
+# Screen locking
+exec light-locker
+
 # Background
 exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper
 

@@ -1,6 +1,12 @@
 
 ######## Local (Lux) ########
 
+# Screenlocker
+bindsym $mod+l exec --no-startup-id light-locker-command --lock
+
+# Screen locking
+exec light-locker
+
 # Windows Gaming PC
 bindsym $mod+Home exec sudo virsh start wither
 
