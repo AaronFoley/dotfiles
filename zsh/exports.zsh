@@ -1,5 +1,5 @@
 # Add User bin to the path
-export PATH=~/bin:$PATH
+export PATH=${KREW_ROOT:-$HOME/.krew}/bin:~/bin:$PATH
 
 # Setup default programs
 export LESS='--ignore-case --raw-control-chars'
