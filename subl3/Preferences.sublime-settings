@@ -25,7 +25,13 @@
 		"config",
 		"serializer",
 		"Django",
-		"webhook"
+		"webhook",
+		"github",
+		"Fortigate",
+		"Zerto",
+		"Kibana",
+		"Elasticsearch",
+		"Fortigates"
 	],
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
