@@ -1,14 +1,19 @@
 
-######## Local (Lux) ########
-
-# Screenlocker
-bindsym $mod+l exec --no-startup-id light-locker-command --lock
-
-# Screen locking
-exec light-locker
+################################################
+# Lux (local)
+################################################
 
 # Windows Gaming PC
 bindsym $mod+Home exec sudo virsh start wither
 
-exec feh --bg-fill ~/Pictures/Wallpapers/47383448171_de9b85a69f_o.jpg
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# Screenlocker
+bindsym $mod+l exec betterlockscreen -l dim
+
+# Setup Screens
+exec --no-startup-id autorandr -c
+
+# Background
+exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper
+
+# Lock
+exec betterlockscreen -l dim

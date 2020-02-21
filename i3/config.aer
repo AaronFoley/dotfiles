@@ -1,14 +1,22 @@
+
 ################################################
-# Aer
+# Aer (local)
 ################################################
+
+# Windows Gaming PC
+bindsym $mod+Home exec sudo virsh start wither
 
 # Screenlocker
-bindsym $mod+l exec --no-startup-id light-locker-command --lock
+bindsym $mod+l exec betterlockscreen -l dim
 
-# Screen locking
-exec light-locker
+# Setup Screens
+exec --no-startup-id autorandr -c
 
 # Background
 exec feh --bg-scale ~/Pictures/Wallpapers/wallpaper
 
+# Lock
+exec betterlockscreen -l dim
+
+# Networking
 exec --no-startup-id nm-applet

@@ -40,7 +40,7 @@
 # Link X
 - link:
     ~/.Xresources: x/Xresources
-    ~/.xinitrc: x/xinitrc-arc
+    ~/.xinitrc: x/xinitrc
 
 # Link Shell
 - link:
