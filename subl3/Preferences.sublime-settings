@@ -31,7 +31,41 @@
 		"Zerto",
 		"Kibana",
 		"Elasticsearch",
-		"Fortigates"
+		"Fortigates",
+		"Kickstart",
+		"Kickstarting",
+		"kickstarted",
+		"Intelliops",
+		"prepended",
+		"idempotently",
+		"async",
+		"optimisation",
+		"vapp",
+		"organisation",
+		"vcloud",
+		"mixin",
+		"username",
+		"auth",
+		"str",
+		"url",
+		"Unmounting",
+		"requestor",
+		"Enquiry",
+		"Microservice",
+		"refactored",
+		"failover",
+		"Multicast",
+		"multicast",
+		"Admin",
+		"admin",
+		"Cronjob",
+		"versioning",
+		"mgmt",
+		"outlier",
+		"Evgeny",
+		"Portgroup",
+		"unreserve",
+		"approver",
 	],
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
@@ -95,25 +129,14 @@
 		"*.psd",
 		"*.db",
 		"*.sublime-workspace",
-		"/data/home/aaron/Documents/myairportsedan/_ss_environment.php"
+		"*.coverage*"
 	],
 	"folder_exclude_patterns":
 	[
 		".svn",
 		".git",
 		".hg",
-		"CVS",
-		"/data/home/aaron/Documents/myairportsedan/siteconfig",
-		"/data/home/aaron/Documents/myairportsedan/bootstrap-forms",
-		"/data/home/aaron/Documents/myairportsedan/reports",
-		"/data/home/aaron/Documents/myairportsedan/assets",
-		"/data/home/aaron/Documents/myairportsedan/serve",
-		"/data/home/aaron/Documents/myairportsedan/spamprotection",
-		"/data/home/aaron/Documents/myairportsedan/themes/simple",
-		"/data/home/aaron/Documents/myairportsedan/vendor",
-		"/data/home/aaron/Documents/myairportsedan/nocaptcha",
-		"/data/home/aaron/Documents/myairportsedan/framework",
-		"/data/home/aaron/Documents/myairportsedan/cms"
+		"CVS"
 	],
 	"font_face": "Hack Nerd Font Mono",
 	"font_options":
@@ -122,11 +145,12 @@
 		"gray_antialias",
 		"subpixel_antialias"
 	],
-	"font_size": 14,
+	"font_size": 15,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Markdown",
+		"Vintage",
 	],
 	"indent_guide_options":
 	[
@@ -153,5 +177,5 @@
 	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": "auto"
+	"word_wrap": "auto",
 }

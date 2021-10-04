@@ -15,9 +15,11 @@
 		"Dockerfile Syntax Highlighting",
 		"Dotfiles Syntax Highlighting",
 		"GitGutter",
+		"Gitignored File Excluder",
 		"Gradle_Language",
 		"HTMLBeautify",
 		"Indent XML",
+		"INI",
 		"Jinja2",
 		"LiveReload",
 		"MarkdownEditing",
@@ -28,11 +30,13 @@
 		"PlainTasks",
 		"PowerShell",
 		"Pretty JSON",
+		"ProjectManager",
 		"SFTP",
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-contrib-ansible-lint",
 		"SublimeLinter-flake8",
+		"TOML",
 		"TrailingSpaces"
-	]
+	],
 }

@@ -3,10 +3,12 @@ sftp-config.json
 sftp-config-dis.json
 sftp-config-off.json
 stfp-config*.json
+sftp-config*
 
 # Subl3 Project Files
 *.sublime-project
 *.sublime-workspace
+.anaconda
 
 # Idea
 .idea/

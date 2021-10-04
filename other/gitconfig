@@ -20,3 +20,5 @@
 	helper = /usr/lib/git-core/git-credential-libsecret
 [pager]
 	branch = false
+[pull]
+	rebase = true

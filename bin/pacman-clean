@@ -1,10 +1,9 @@
 #!/bin/bash
 
-tar -cjf /data/backup/pacman-database.tar.bz2 /var/lib/pacman/local
+tar -cjf /home/afoley/backup/pacman-database.tar.bz2 /var/lib/pacman/local
 pacman -Rscn $(pacman -Qtdq)
 paccache -r
 paccache -ruk0
-pacman-optimize && sync
 updatedb
 
 exit 0

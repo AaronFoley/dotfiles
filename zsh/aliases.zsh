@@ -1,6 +1,5 @@
 # Programs
 alias ls="/bin/ls -hlap --file-type --time-style='+%y-%m-%d %H%M%S' --color=auto --group-directories-first"
-alias subl='subl3'
 alias grep='grep --color=auto'
 
 # No Clobbering
