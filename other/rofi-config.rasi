@@ -1,0 +1,6 @@
+configuration {
+    font: "hack 10";
+    color-normal: "#1d1f21,  #ffffff,  #1d1f21,  #1d1f21,  #8abeb7";
+    color-window: "#1d1f21,      #ffffff";
+}
+@theme "/usr/share/rofi/themes/Paper.rasi"

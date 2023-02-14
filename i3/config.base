@@ -46,7 +46,7 @@ bar {
     height 30
     font pango:Hack Nerd Font Mono
     status_command i3blocks
-    tray_output None
+    tray_output Primary
     mode dock
     colors {
         statusline $white

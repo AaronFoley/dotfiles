@@ -6,12 +6,12 @@
 	"installed_packages":
 	[
 		"A File Icon",
-		"Anaconda",
 		"Ansible",
 		"ApplySyntax",
 		"Base16 Color Schemes",
 		"Color Highlighter",
 		"Compare Side-By-Side",
+		"CoolBase64",
 		"Dockerfile Syntax Highlighting",
 		"Dotfiles Syntax Highlighting",
 		"GitGutter",
@@ -22,6 +22,9 @@
 		"INI",
 		"Jinja2",
 		"LiveReload",
+		"LSP",
+		"LSP-json",
+		"LSP-pyright",
 		"MarkdownEditing",
 		"MarkdownPreview",
 		"Material Theme",
@@ -31,12 +34,18 @@
 		"PowerShell",
 		"Pretty JSON",
 		"ProjectManager",
+		"Python Output Format",
 		"SFTP",
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-contrib-ansible-lint",
 		"SublimeLinter-flake8",
+		"ToDone",
 		"TOML",
-		"TrailingSpaces"
+		"TrailingSpaces",
+	],
+	"repositories":
+	[
+		"https://packagecontrol.io/testing/packages.json"
 	],
 }

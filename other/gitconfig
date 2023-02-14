@@ -1,5 +1,6 @@
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+    cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 -r git branch -d"
 [core]
 	editor = nano
 	excludesfile = ~/.config/git/gitignore
@@ -17,8 +18,11 @@
 [url "https://"]
 	insteadOf = git://
 [credential]
-	helper = /usr/lib/git-core/git-credential-libsecret
+	credentialStore = secretservice
+	helper = /usr/share/git-credential-manager-core/git-credential-manager
 [pager]
 	branch = false
 [pull]
 	rebase = true
+[credential "https://dev.azure.com"]
+	useHttpPath = true

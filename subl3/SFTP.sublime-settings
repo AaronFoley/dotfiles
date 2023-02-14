@@ -1,0 +1,5 @@
+// See the left pane for the list of settings and valid values
+{
+    "debug": 2,
+    "debug_log_file": "/home/afoley/Desktop/sublime_sftp_debug.txt"
+}

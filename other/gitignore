@@ -14,4 +14,11 @@ sftp-config*
 .idea/
 *.iml
 
+# Pyright
+pyrightconfig.json
 
+# TODO
+TODO
+
+# vscode
+.vscode

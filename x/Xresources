@@ -54,8 +54,9 @@
 ! --- end of terminal colors section -------------------------------------------
 ! ------------------------------------------------------------------------------
 
-*.internalBorder: 0
+! *.internalBorder: 0
 
+URxvt.lineSpace: 0
 URxvt.depth: 32
 URxvt.background: [85]base00
 
@@ -74,7 +75,7 @@ Xft.hintstyle:  hintslight
 Xft.lcdfilter:  lcddefault
 Xft.rgba:       rgb
 
-URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher,font-size
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher,font-size,-confirm-paste
 URxvt.url-select.underline: true
 URxvt.matcher.button: 3
 URxvt.url-launcher: /usr/bin/google-chrome-stable
