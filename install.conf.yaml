@@ -25,17 +25,17 @@
 # Files to do with zsh
 - link:
     ~/.zshrc: zsh/zshrc
-    ~/.zlogin: zsh/zlogin
     ~/.config/zsh/aliases.zsh: zsh/aliases.zsh
     ~/.config/zsh/colours.zsh: zsh/colours.zsh
     ~/.config/zsh/completion.zsh: zsh/completion.zsh
     ~/.config/zsh/exports.zsh: zsh/exports.zsh
     ~/.config/zsh/functions.zsh: zsh/functions.zsh
-    ~/.config/zsh/prompt.zsh: zsh/prompt.zsh
     ~/.config/zsh/setopt.zsh: zsh/setopt.zsh
     ~/.config/zsh/bindkeys.zsh: zsh/bindkeys.zsh
-    ~/.config/zsh/000-zsh-git-prompt.zsh: libs/git/zsh-git-prompt/zshrc.sh
+    ~/.config/zsh/omzsh.zsh: zsh/omzsh.zsh
     ~/.config/zsh/000-zsh-syntax-highlighting.zsh: libs/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    ~/.config/oh-my-zsh: libs/git/ohmyzsh
+    ~/.config/oh-my-zsh-custom/themes/bullet-train.zsh-theme: libs/git/bullet-train.zsh/bullet-train.zsh-theme
 
 # Clean symlinks which have moved
 - clean: ['~', '~/.config/']

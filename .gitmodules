@@ -2,9 +2,12 @@
 	path = libs/git/dotbot
 	url = https://github.com/anishathalye/dotbot
     ignore = dirty
-[submodule "libs/git/zsh-git-prompt"]
-	path = libs/git/zsh-git-prompt
-	url = https://github.com/olivierverdier/zsh-git-prompt.git
 [submodule "libs/git/zsh-syntax-highlighting"]
 	path = libs/git/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "libs/git/ohmyzsh"]
+	path = libs/git/ohmyzsh
+	url = git@github.com:ohmyzsh/ohmyzsh.git
+[submodule "libs/git/bullet-train.zsh"]
+	path = libs/git/bullet-train.zsh
+	url = git@github.com:caiogondim/bullet-train.zsh.git

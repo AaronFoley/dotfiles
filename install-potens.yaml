@@ -1,0 +1,14 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- link:
+    ~/.config/hypr: hypr
+    ~/.config/waybar/config: waybar/config
+    ~/.config/waybar/style.css: waybar/style.css
+    ~/.config/kitty/kitty.conf: kitty/kitty.conf
+    ~/.config/wofi: wofi
+
+# Clean symlinks which have moved
+- clean: ['~', '~/.config/']

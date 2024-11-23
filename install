@@ -9,8 +9,10 @@ DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${BASEDIR}"
+echo "Updating submodules"
 git submodule update --init --recursive --remote "${BASEDIR}/libs/git/"
 
+echo "Installing dotfiles"
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 
 # If there is a config file for this host

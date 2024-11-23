@@ -1,9 +1,0 @@
-#!/bin/bash
-
-tar -cjf /home/afoley/backup/pacman-database.tar.bz2 /var/lib/pacman/local
-pacman -Rscn $(pacman -Qtdq)
-paccache -r
-paccache -ruk0
-updatedb
-
-exit 0

@@ -1,0 +1,62 @@
+/** ********** Fonts ********** **/
+
+* {
+    font-family: "Hack Nerd Font Mono";
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#window {
+    background-color: #131313;
+    color: #f4f5f7;
+    border-radius: 20px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+}
+
+#outer-box {
+    padding: 20px;
+}
+
+#input {
+    background-color: #040404;
+    border: 0px solid #ea4c88;
+    padding: 8px 12px;
+}
+
+#scroll {
+    margin-top: 20px;
+}
+
+#inner-box {}
+
+#img {
+    padding-right: 8px;
+}
+
+#text {
+    color: #FFFFFF;
+}
+
+#text:selected {
+    color: #FFFFFF;
+}
+
+#entry {
+    padding: 6px;
+}
+
+#entry:selected {
+    background-color: #ea4c88;
+    color: #2F2F2F;
+}
+
+#unselected {}
+
+#selected {}
+
+#input,
+    #entry:selected {
+    border-radius: 15px;
+}

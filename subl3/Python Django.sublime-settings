@@ -1,4 +1,0 @@
-// These settings override both User and Default settings for the Python Django syntax
-{
-    "auto_complete_triggers": [{"selector": "source.python", "characters": "."}],
-}

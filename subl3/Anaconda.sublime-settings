@@ -1,7 +1,0 @@
-{
-    "anaconda_linting": false,
-    "anaconda_linter_phantoms": true,
-    "auto_python_builder_enabled": false,
-    "anaconda_allow_project_environment_hooks": true,
-    "validate_imports": true
-}

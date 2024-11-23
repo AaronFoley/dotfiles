@@ -1,7 +1,0 @@
-ACTION=="add", \
-SUBSYSTEM=="usb", \
-ENV{ID_VENDOR_ID}=="045e", \
-ENV{ID_MODEL_ID}=="028e", \
-TAG+="systemd", \
-PROGRAM="/bin/systemd-escape --template=xbox-hotplug-add@.service %E{DEVNAME}", \
-ENV{SYSTEMD_WANTS}="%c"
