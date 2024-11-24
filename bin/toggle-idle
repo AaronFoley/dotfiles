@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Check if hypridle is running
+if pgrep -x "hypridle" > /dev/null
+then
+    echo "hypridle is running. Killing the process."
+    pkill -x "hypridle"
+else
+    echo "hypridle is not running. Executing the command."
+    hyprctl dispatch exec hypridle
+fi

@@ -6,24 +6,19 @@ zstyle ':omz:alpha:lib:git' async-prompt no
 
 ZSH_THEME="bullet-train"
 
-BULLETTRAIN_PROMPT_CHAR="❯"
+# BULLETTRAIN_PROMPT_CHAR="${WHITE}❯"
+BULLETTRAIN_PROMPT_CHAR=("%{$fg[white]%}❯")
 
 BULLETTRAIN_PROMPT_ORDER=(
-  time
   status
-  context
   dir
   virtualenv
   kctx
   git
   go
   rust
-  elixir
   cmd_exec_time
 )
-
-BULLETTRAIN_TIME_BG="black"
-BULLETTRAIN_TIME_FG="default"
 
 plugins=(git)
 

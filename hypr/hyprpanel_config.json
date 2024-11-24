@@ -1,0 +1,72 @@
+{
+  "bar.customModules.updates.pollingInterval": 21600000,
+  "theme.bar.location": "top",
+  "theme.bar.buttons.enableBorders": false,
+  "theme.bar.menus.monochrome": false,
+  "notifications.position": "top right",
+  "menus.clock.weather.location": "Australia/Sydney",
+  "menus.clock.weather.unit": "metric",
+  "bar.layouts": {
+    "*": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        ""
+      ],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "menus.transition": "crossfade",
+  "theme.bar.floating": true,
+  "bar.launcher.autoDetectIcon": false,
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.workspaces": 1,
+  "bar.workspaces.hideUnoccupied": true,
+  "bar.workspaces.workspaceMask": false,
+  "theme.osd.location": "top",
+  "theme.osd.orientation": "horizontal",
+  "menus.clock.time.military": true,
+  "menus.clock.time.hideSeconds": true,
+  "bar.network.showWifiInfo": false,
+  "bar.battery.hideLabelWhenFull": true,
+  "bar.clock.showIcon": true,
+  "bar.clock.showTime": true,
+  "bar.clock.format": "%H:%M",
+  "theme.bar.buttons.notifications.enableBorder": false,
+  "bar.notifications.hideCountWhenZero": true,
+  "bar.notifications.show_total": true,
+  "theme.font.name": "Hack Nerd Font Propo Bold",
+  "menus.dashboard.shortcuts.enabled": false,
+  "menus.dashboard.directories.enabled": false,
+  "menus.bluetooth.showBattery": true,
+  "menus.power.lowBatteryNotification": true,
+  "menus.power.confirmation": true,
+  "bar.workspaces.numbered_active_indicator": "underline",
+  "bar.workspaces.reverse_scroll": false,
+  "theme.matugen": true,
+  "wallpaper.image": "/home/afoley/Pictures/wallpaper",
+  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.scheme_type": "fruit-salad",
+  "theme.matugen_settings.variation": "vivid_3",
+  "theme.bar.transparent": true,
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "menus.dashboard.powermenu.avatar.name": "Aaron Foley",
+  "menus.dashboard.powermenu.avatar.image": "/home/afoley/Downloads/Arch-linux-logo-1602415784.png",
+  "bar.workspaces.showWsIcons": false,
+  "bar.workspaces.showApplicationIcons": false,
+  "theme.bar.outer_spacing": "0.5em",
+  "menus.dashboard.controls.enabled": true
+}

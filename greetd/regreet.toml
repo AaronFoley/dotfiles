@@ -13,16 +13,16 @@ fit = "Contain"
 application_prefer_dark_theme = true
 
 # Cursor theme name
-cursor_theme_name = "Adwaita"
+cursor_theme_name = "Bibata-Modern-Ice"
 
 # Font name and size
-font_name = "Cantarell 16"
+font_name = "Hack Nerd Font Mono 16"
 
 # Icon theme name
-icon_theme_name = "Adwaita"
+icon_theme_name = "candy-icons"
 
 # GTK theme name
-theme_name = "Adwaita"
+theme_name = "Sweet"
 
 [commands]
 reboot = [ "systemctl", "reboot" ]

@@ -9,6 +9,9 @@
     ~/.config/waybar/style.css: waybar/style.css
     ~/.config/kitty/kitty.conf: kitty/kitty.conf
     ~/.config/wofi: wofi
+    ~/bin/toggle-idle: bin/toggle-idle
+    ~/bin/toggle-touchpad: bin/toggle-idle
+    ~/Pictures/wallpaper: libs/img/wallpapers/CatppuccinMocha-Kurzgesagt-CloudyQuasar1.png
 
 # Clean symlinks which have moved
 - clean: ['~', '~/.config/']

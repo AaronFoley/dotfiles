@@ -1,57 +1,88 @@
 {
     "layer": "top",
-    "height": 30,
+    "height": 32,
     "spacing": 4,
     "margin": "20 20 0 20",
+    "reload_style_on_change": true,
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["wlr/window"],
-    "modules-right": ["pulseaudio", "battery", "clock", "tray"],
+    "modules-center": [],
+    "modules-right": ["wireplumber", "bluetooth", "network", "battery", "clock", "tray"],
     "hyprland/workspaces": {
         "format": "{id}",
-        "on-click": "echo hello world",
         "sort-by-number": true
     },
     "tray": {
-        "icon-size": 21,
         "spacing": 10
     },
-    "clock": {
-        "format": "{:%Y-%m-%d %H:%M}",
-        "timezone": "Australia/Sydney",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    "bluetooth": {
+        "format": "",
+        "tooltip-format": "{status}",
+        "on-click": "overskride &"
     },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
-    "pulseaudio": {
-        "scroll-step": 1,
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+    "wireplumber": {
+        "format": "{icon}",
+        "format-bluetooth": "󰂰",
+        "nospacing": 1,
+        "tooltip-format": "Volume : {volume}%",
+        "format-muted": "󰝟",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "default": ["󰖀","󰕾",""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pwvucontrol",
+        "scroll-step": 1
+    },
+    "network": {
+        "format-wifi" : "{icon}",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        "format-ethernet": "󰀂",
+	    "format-alt" : "󱛇",
+        "format-disconnected" : "󰖪",
+	    "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+	    "tooltip-format-disconnected": "Disconnected",
+	    "on-click": "nm-connection-editor &",
+	    "interval": 5
+    },
+    "clock": {
+        "format-alt": "  {:%a, %d %b %Y}",
+        "format": "  {:%I:%M %p}",
+        "tooltip": false
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": {
+            "charging": [
+                "󰢜",
+                "󰂆",
+                "󰂇",
+                "󰂈",
+                "󰢝",
+                "󰂉",
+                "󰢞",
+                "󰂊",
+                "󰂋",
+                "󰂅"
+            ],
+            "default": [
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ]
+        },
+        "format-full": "Charged ",
+        "interval": 5,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "tooltip": true
     }
 }
