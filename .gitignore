@@ -1,4 +1,10 @@
-i3/config
-subl3/Color Highlighter/
-subl3/Package Control.merged-ca-bundle
-subl3/Projects
+# Hypr generated files
+hypr/monitors.conf
+hypr/workspaces.conf
+hypr/colors.conf
+
+# Walker Generated files
+walker/themes/matugen.css
+walker/themes/default.css
+walker/themes/default.toml
+walker/themes/default_window.toml

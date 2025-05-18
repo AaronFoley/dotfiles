@@ -6,3 +6,8 @@ TODO
 
 # vscode
 .vscode
+
+# Scratch
+.af-scratch
+af_local.*
+af-local*

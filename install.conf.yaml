@@ -25,17 +25,19 @@
 # Files to do with zsh
 - link:
     ~/.zshrc: zsh/zshrc
-    ~/.config/zsh/aliases.zsh: zsh/aliases.zsh
-    ~/.config/zsh/colours.zsh: zsh/colours.zsh
-    ~/.config/zsh/completion.zsh: zsh/completion.zsh
-    ~/.config/zsh/exports.zsh: zsh/exports.zsh
-    ~/.config/zsh/functions.zsh: zsh/functions.zsh
-    ~/.config/zsh/setopt.zsh: zsh/setopt.zsh
-    ~/.config/zsh/bindkeys.zsh: zsh/bindkeys.zsh
-    ~/.config/zsh/omzsh.zsh: zsh/omzsh.zsh
-    ~/.config/zsh/000-zsh-syntax-highlighting.zsh: libs/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    ~/.config/zsh/30-aliases.zsh: zsh/30-aliases.zsh
+    ~/.config/zsh/25-colours.zsh: zsh/25-colours.zsh
+    ~/.config/zsh/12-completion.zsh: zsh/12-completion.zsh
+    ~/.config/zsh/35-exports.zsh: zsh/35-exports.zsh
+    ~/.config/zsh/40-functions.zsh: zsh/40-functions.zsh
+    ~/.config/zsh/10-setopt.zsh: zsh/10-setopt.zsh
+    ~/.config/zsh/11-bindkeys.zsh: zsh/11-bindkeys.zsh
+    ~/.config/zsh/20-omzsh.zsh: zsh/20-omzsh.zsh
     ~/.config/oh-my-zsh: libs/git/ohmyzsh
-    ~/.config/oh-my-zsh-custom/themes/bullet-train.zsh-theme: libs/git/bullet-train.zsh/bullet-train.zsh-theme
+    ~/.config/oh-my-zsh-custom/plugins/zsh-syntax-highlighting: libs/git/zsh-syntax-highlighting/
+    ~/.config/oh-my-zsh-custom/plugins/zsh-autosuggestions: libs/git/zsh-autosuggestions
+    ~/.config/oh-my-zsh-custom/plugins/fast-syntax-highlighting: libs/git/fast-syntax-highlighting
+    ~/.config/ohmyposh: ohmyposh
 
 # Clean symlinks which have moved
 - clean: ['~', '~/.config/']

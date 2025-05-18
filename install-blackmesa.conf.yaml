@@ -1,0 +1,25 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- link:
+    ~/.config/hypr: hypr
+    ~/.config/kitty/kitty.conf: kitty/kitty.conf
+    ~/.config/wofi: wofi
+    ~/.config/matugen: matugen
+    ~/.config/wallust: wallust
+    ~/.config/walker: walker
+    ~/.config/swappy/config: swappy/config
+    ~/.config/gtk-3.0/gtk.css: gtk-3.0/gtk.css
+    ~/.config/gtk-3.0/settings.ini: gtk-3.0/settings.ini
+    ~/.config/gtk-4.0/gtk.css: gtk-4.0/gtk.css
+    ~/.config/gtk-4.0/settings.ini: gtk-4.0/settings.ini
+    ~/.config/hyprpanel: hyprpanel
+    ~/.config/fastfetch/config.jsonc: fastfetch/config.jsonc
+    ~/bin/toggle-idle: bin/toggle-idle
+    ~/bin/toggle-touchpad: bin/toggle-idle
+    ~/Pictures/wallpaper: libs/img/wallpapers/wallhaven-g8171e.png
+
+# Clean symlinks which have moved
+- clean: ['~', '~/.config/']

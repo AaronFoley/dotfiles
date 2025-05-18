@@ -8,6 +8,9 @@
 [submodule "libs/git/ohmyzsh"]
 	path = libs/git/ohmyzsh
 	url = git@github.com:ohmyzsh/ohmyzsh.git
-[submodule "libs/git/bullet-train.zsh"]
-	path = libs/git/bullet-train.zsh
-	url = git@github.com:caiogondim/bullet-train.zsh.git
+[submodule "libs/git/zsh-autosuggestions"]
+	path = libs/git/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "libs/git/fast-syntax-highlighting"]
+	path = libs/git/fast-syntax-highlighting
+	url = https://github.com/zdharma-continuum/fast-syntax-highlighting.git
