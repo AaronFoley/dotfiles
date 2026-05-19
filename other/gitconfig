@@ -9,6 +9,7 @@
 	ui = true
 [push]
 	default = upstream
+	autoSetupRemote = true
 [apply]
     whitespace = strip
 [user]

@@ -1,9 +1,11 @@
+@import "colours.css";
+
 * {
   border: none;
   border-radius: 0;
   min-height: 0;
   font-family: FontAwesome, Hack Nerd Font Mono;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 window#waybar {
@@ -20,32 +22,34 @@ window#waybar.hidden {
 
 #workspaces button {
   all: initial;
-  /* Remove GTK theme values (waybar #1351) */
-  min-width: 0;
+  min-width: 20px;
   /* Fix weird spacing in materia (waybar #450) */
   box-shadow: inset 0 -3px transparent;
   /* Use box-shadow instead of border so the text isn't offset */
-  padding: 6px 18px;
   margin: 6px 3px;
-  border-radius: 4px;
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  padding: 6px 12px;
+  background-color: @background;
+  color: @on_background;
+  border-radius: 10px;
+  border: 3px solid @background;
 }
 
 #workspaces button.active {
-  color: #1e1e2e;
-  background-color: #cdd6f4;
-}
-
-#workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
-  color: #1e1e2e;
-  background-color: #cdd6f4;
+  color: @tertiary;
+  border: 3px solid @tertiary;
 }
 
 #workspaces button.urgent {
-  background-color: #f38ba8;
+  background-color: @error;
+}
+
+#window {
+  background-color: @background;
+  color: @on_background;
+  font-size: 20px;
+  padding: 6px 12px;
+  margin: 6px 3px;
+  border-radius: 10px;
 }
 
 #memory,
@@ -57,83 +61,67 @@ window#waybar.hidden {
 #bluetooth,
 #network,
 #clock,
+#idle_inhibitor,
 #tray {
-  border-radius: 4px;
+  min-width: 20px;
+  border-radius: 10px;
   margin: 6px 3px;
   padding: 6px 12px;
-  background-color: #1e1e2e;
-  color: #181825;
-}
-
-#custom-power {
-  margin-right: 6px;
-}
-
-#custom-logo {
-  padding-right: 7px;
-  padding-left: 7px;
-  margin-left: 5px;
-  font-size: 15px;
-  border-radius: 8px 0px 0px 8px;
-  color: #1793d1;
-}
-
-#memory {
-  background-color: #fab387;
+  background-color: @background;
+  color: @on_background;
 }
 
 #battery {
-  background-color: #f38ba8;
+  border: 3px solid #f38ba8;
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-  background-color: #ff0000;
-  color: #FFFF00;
+  border: 3px solid #ff0000;
 }
 
 #battery.charging {
-  background-color: #a6e3a1;
-  color: #181825;
-}
-
-#backlight {
-  background-color: #fab387;
+  border: 3px solid #a6e3a1;
 }
 
 #wireplumber {
-  background-color: #f9e2af;
-}
-
-#pulseaudio {
-  background-color: #f9e2af;
+  border: 3px solid #f9e2af;
 }
 
 #bluetooth {
-  background-color: #8bc1f3;
+  border: 3px solid #75ace0;
 }
 
 #bluetooth.off,
 #bluetooth.disabled
 {
-    background-color: #292929;
-    color: #ffffff;
+  border: 3px solid @background;
 }
 
 #network {
-  background-color: #94e2d5;
+  border: 3px solid #94e2d5;
 }
 
 #clock {
-  font-family: JetBrainsMono Nerd Font;
-  background-color: #cba6f7;
+  border: 3px solid #cba6f7;
 }
 
 #custom-power {
-  background-color: #f2cdcd;
+  border: 3px solid #f2cdcd;
 }
 
+#idle_inhibitor {
+  border: 3px solid #f38ba8;
+}
+
+#idle_inhibitor.deactivated {
+  border: 3px solid @background;
+}
+
+#tray {
+  border: 3px solid #a7d0b7;
+}
 
 tooltip {
   border-radius: 8px;

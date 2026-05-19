@@ -1,56 +1,111 @@
 {
     "layer": "top",
-    "height": 32,
+    "height": 63,
     "spacing": 4,
     "margin": "20 20 0 20",
     "reload_style_on_change": true,
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+
+    ],
     "modules-center": [],
-    "modules-right": ["wireplumber", "bluetooth", "network", "battery", "clock", "tray"],
+    "modules-right": [
+        "idle_inhibitor",
+        "wireplumber",
+        "bluetooth",
+        "network",
+        "battery",
+        "tray",
+        "clock"
+    ],
     "hyprland/workspaces": {
         "format": "{id}",
         "sort-by-number": true
     },
+    "hyprland/window": {
+        "format": "{title}",
+        "icon": true,
+        "separate-outputs": true
+    },
     "tray": {
+        "icon-size": 20,
         "spacing": 10
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
     },
     "bluetooth": {
         "format": "",
+        "format-on": " On",
+        "format-connected": " {num_connections}",
         "tooltip-format": "{status}",
-        "on-click": "overskride &"
+        "on-click": "blueberry &"
     },
     "wireplumber": {
-        "format": "{icon}",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "󰂰",
         "nospacing": 1,
         "tooltip-format": "Volume : {volume}%",
         "format-muted": "󰝟",
         "format-icons": {
             "headphone": "",
-            "default": ["󰖀","󰕾",""]
+            "default": [
+                "󰖀",
+                "󰕾",
+                ""
+            ]
         },
         "on-click": "pwvucontrol",
         "scroll-step": 1
     },
     "network": {
-        "format-wifi" : "{icon}",
-        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        "format-wifi": "{icon} {essid}",
+        "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ],
         "format-ethernet": "󰀂",
-	    "format-alt" : "󱛇",
-        "format-disconnected" : "󰖪",
-	    "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "format-alt": "󱛇",
+        "format-disconnected": "󰖪",
+        "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
         "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-	    "tooltip-format-disconnected": "Disconnected",
-	    "on-click": "nm-connection-editor &",
-	    "interval": 5
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "nm-connection-editor &",
+        "interval": 5
     },
     "clock": {
-        "format-alt": "  {:%a, %d %b %Y}",
-        "format": "  {:%I:%M %p}",
-        "tooltip": false
+        "format": " {:%Y-%m-%d %I:%M %p}",
+        "tooltip": true,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_down",
+            "on-scroll-down": "shift_up"
+        }
     },
     "battery": {
-        "format": "{capacity}% {icon}",
+        "format": "{icon} {capacity}%",
         "format-icons": {
             "charging": [
                 "󰢜",

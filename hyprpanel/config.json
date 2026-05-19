@@ -75,7 +75,7 @@
   "theme.bar.outer_spacing": "1.6em",
   "menus.dashboard.controls.enabled": true,
   "theme.font.size": "1.2rem",
-  "hyprpanel.restartAgs": true,
+  "hyprpanel.restartAgs": false,
   "bar.workspaces.monitorSpecific": true,
   "bar.workspaces.showAllActive": true,
   "theme.bar.enableShadow": false,
@@ -521,5 +521,8 @@
   "notifications.monitor": 9,
   "notifications.showActionsOnHover": true,
   "theme.bar.menus.menu.notifications.height": "30em",
-  "bar.network.rightClick": "nm-connection-editor"
+  "bar.network.rightClick": "nm-connection-editor",
+  "bar.customModules.storage.paths": [
+    "/"
+  ]
 }

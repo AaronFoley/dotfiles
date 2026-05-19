@@ -24,3 +24,7 @@ output_path = '~/.cache/wal/colors.json'
 [templates.walker]
 input_path = '~/.config/matugen/templates/gtk-colors.css'
 output_path = '~/.config/walker/themes/matugen.css'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colours.css'
+output_path = '~/.config/waybar/colours.css'

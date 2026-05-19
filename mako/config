@@ -1,0 +1,44 @@
+# General
+
+icons=1
+markup=1
+actions=1
+width=300
+height=200
+sort=-time
+invisible=0
+group-by=none
+format=%s\n%b
+layer=overlay
+border-size=4
+max-visible=10
+padding=10
+margin=2,2,2,2
+outer-margin=15
+max-icon-size=42
+anchor=top-right
+border-radius=7
+ignore-timeout=0
+text-alignment=center
+default-timeout=3000
+on-button-left=dismiss-all
+font=Hack Nerd Font Mono Bold 14
+icon-path=/usr/share/icons/hicolor
+
+# Colors (Catppuccin Mocha)
+
+background-color=#131313
+text-color=#e2e2e2
+border-color=#a7d0b7
+progress-color=over #313244
+
+# Per-mode settings
+[mode=do-not-disturb]
+invisible=1
+on-notify=none
+
+[mode=silent]
+on-notify=none
+
+[urgency=high]
+border-color=#fab387

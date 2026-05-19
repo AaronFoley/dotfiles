@@ -1,0 +1,149 @@
+/*
+* GTK Colors
+* Generated with Matugen
+*/
+
+@define-color accent_color #d7c950;
+@define-color accent_fg_color #201c00;
+@define-color accent_bg_color #d7c950;
+@define-color window_bg_color #131313;
+@define-color window_fg_color #e2e2e2;
+@define-color headerbar_bg_color #131313;
+@define-color headerbar_fg_color #e2e2e2;
+@define-color popover_bg_color #131313;
+@define-color popover_fg_color #e2e2e2;
+@define-color view_bg_color #131313;
+@define-color view_fg_color #e2e2e2;
+@define-color card_bg_color #131313;
+@define-color card_fg_color #e2e2e2;
+@define-color sidebar_bg_color @window_bg_color;
+@define-color sidebar_fg_color @window_fg_color;
+@define-color sidebar_border_color @window_bg_color;
+@define-color sidebar_backdrop_color @window_bg_color;
+
+
+@define-color foreground #a9c3ce;
+@define-color background #161711;
+@define-color cursor #a9c3ce;
+
+@define-color color0 #161711;
+@define-color color1 #9c8c33;
+@define-color color2 #b1903b;
+@define-color color3 #c0af42;
+@define-color color4 #b2b83d;
+@define-color color5 #c4c34f;
+@define-color color6 #cccc66;
+@define-color color7 #a9c3ce;
+@define-color color8 #768890;
+@define-color color9 #9c8c33;
+@define-color color10 #b1903b;
+@define-color color11 #c0af42;
+@define-color color12 #b2b83d;
+@define-color color13 #c4c34f;
+@define-color color14 #cccc66;
+@define-color color15 #a9c3ce;
+
+scrollbar {
+  opacity: 0;
+}
+
+.box-wrapper {
+  box-shadow:
+    0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+  /*  NEEDS TO BE TRANSPARENT CUZ OF HYPRLAND BUG */
+  background: alpha(@window_bg_color, 0.99);
+}
+
+.preview-box {
+}
+
+.box {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid lighter(@background);
+}
+
+.search-container {
+  background: @window_bg_color;
+}
+
+.input placeholder {
+  opacity: 0.5;
+}
+
+.input {
+  font-size: 20px;
+  border-radius: 2px;
+  padding: 10px;
+  box-shadow: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+.input:focus,
+.input:active {
+  box-shadow: none;
+  outline: none;
+}
+
+.content-container {
+}
+
+.placeholder {
+}
+
+.scroll {
+}
+
+.list {
+  background: @window_bg_color;
+}
+
+child,
+child > * {
+  margin: 0;
+  padding: 8px;
+  border-radius: 2px;
+}
+
+.item-box {
+  padding: 10px;
+}
+
+.item-text-box {
+  all: unset;
+}
+
+.item-text {
+}
+
+.item-subtext {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.item-image {
+}
+
+.keybind-hints {
+  padding: 10px;
+  font-size: 14px;
+  color: @theme_fg_color;
+  opacity: 0.5;
+  background: lighter(@window_bg_color);
+}
+
+.preview {
+}
+
+.calc .item-text {
+  font-size: 24px;
+}
+
+.calc .item-subtext {
+}
+
+.symbols .item-image {
+  font-size: 18px;
+}

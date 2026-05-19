@@ -38,3 +38,6 @@ zstyle ':completion:*' group-name ''
 # Kubernetes Completions
 
 source <(kubectl completion zsh)
+source <(pulsarctl completion zsh)
+
+source /usr/share/nvm/init-nvm.sh
