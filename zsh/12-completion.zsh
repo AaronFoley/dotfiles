@@ -39,5 +39,6 @@ zstyle ':completion:*' group-name ''
 
 source <(kubectl completion zsh)
 source <(pulsarctl completion zsh)
+source <(flux completion zsh)
 
 source /usr/share/nvm/init-nvm.sh

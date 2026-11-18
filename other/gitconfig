@@ -5,6 +5,7 @@
 	editor = nano
 	excludesfile = ~/.config/git/gitignore
 	pager = less -x1,5
+    hooksPath = ~/.git-hooks
 [color]
 	ui = true
 [push]
